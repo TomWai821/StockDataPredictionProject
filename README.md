@@ -77,9 +77,7 @@ Analyse the data range, trends and the relation in each column
   
 #### Image for Data Analyst
 <details>
-   <summary>Box plot for the whole data</summary>
-   
-   **Box plot (Stock Price Data)**:<br>
+   <summary>Box plot (Stock Price Data)</summary>
    <img src="Image/Diagrams/AnalyseData/BoxPlot_Open.png" style="width:60%;"/><br>
    Image 2.1 - Box plot for Open column data<br>
    
@@ -97,8 +95,10 @@ Analyse the data range, trends and the relation in each column
    
    <img src="Image/Diagrams/AnalyseData/BoxPlot_VWAP.png" style="width:50%;"/><br>
    Image 2.6 - Box plot for VWAP column data<br>
-   
-   **Box plot (Stock Volume Data)**<br>
+</details>
+
+<details>
+   <summary>Box plot (Stock Volume Data)</summary>
    <img src="Image/Diagrams/AnalyseData/BoxPlot_TurnOver.png" style="width:50%;"/><br>
    Image 2.7 - Box plot for Turnover column data<br>
    
@@ -113,9 +113,7 @@ Analyse the data range, trends and the relation in each column
 </details>
 
 <details>
-   <summary>Time Series Chart for the whole data</summary>
-   
-   **Time Series Chart (Stock Price Data)**<br>
+   <summary>Time Series Chart (Stock Price Data)</summary>
    <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Open.png" style="width:75%;"/><br>
    Image 2.11 - Time Series Chart for Open column data<br>
    
