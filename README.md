@@ -65,6 +65,7 @@ Analyse the data range, trends and the relation in each column
    - Heatmap and pair plot (View the data relation)
 
 #### Image for Data Analyst
+<center>
 **Box plot (Stock Price Data)**:<br>
 <img src="Image/Diagrams/AnalyseData/BoxPlot_Open.png" style="width:60%;"/><br>
 Image 2.1 - Box plot for Open column data<br>
@@ -117,7 +118,7 @@ Image 2.15 - Time Series Chart for Close column data<br>
 Image 2.16 - Time Series Chart for VWAP column data<br>
 
 **Time Series Chart (Stock Volume Data)**<br>
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Turnover.png" style="width:75%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_TurnOver.png" style="width:75%;"/><br>
 Image 2.17 - Time Series Chart for Turnover column data<br>
 
 <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:75%;"/><br>
@@ -139,6 +140,7 @@ Image 2.22 - Pair Plot for Stock volume related data<br>
 **HeatMap**<br>
 <img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:75%;"/><br>
 Image 2.23 - HeatMap for the whole data<br>
+</center>
 
 ### 3. Preprocessing
 1. Scale each column to [0,1] with MinMaxScaler
