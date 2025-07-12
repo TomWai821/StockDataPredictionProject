@@ -48,13 +48,13 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
 <img src="Image/DataManagement/DataFiltering.png" style="width:50%;"/><br>
 Image 1.1 - Filter out not useful data and set csv file data to dataframe<br>
 
-<img src="Image/DataManagement/DataFrameColumnsAndShape.png" style="width:50%;"/><br>
+<img src="Image/DataManagement/DataFrameColumnsAndShape.png" style="width:40%;"/><br>
 Image 1.2 - Column in dataframe and the shape of dataframe<br>
 
-<img src="Image/DataManagement/DataDescription.png" style="width:50%;"/><br>
+<img src="Image/DataManagement/DataDescription.png" style="width:60%;"/><br>
 Image 1.3 - Data description for each column<br>
 
-<img src="Image/DataManagement/GroupUpData.png" style="width:50%;"/><br>
+<img src="Image/DataManagement/GroupUpData.png" style="width:40%;"/><br>
 Image 1.4 - Group up the data to priceData and volumeData (used for data analyst before data training)
 
 ### 2. Data Analyst
