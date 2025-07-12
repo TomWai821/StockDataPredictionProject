@@ -118,7 +118,7 @@ Image 2.15 - Time Series Chart for Close column data<br>
 Image 2.16 - Time Series Chart for VWAP column data<br>
 
 **Time Series Chart (Stock Volume Data)**<br>
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Turnover.png" style="width:75%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_TurnOver.png" style="width:75%;"/><br>
 Image 2.17 - Time Series Chart for Turnover column data<br>
 
 <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:75%;"/><br>
@@ -137,9 +137,22 @@ Image 2.21 - Pair Plot for Stock price related data<br>
 <img src="Image/Diagrams/AnalyseData/PairPlot_VolumeData.png" style="width:75%;"/><br>
 Image 2.22 - Pair Plot for Stock volume related data<br>
 
+**Description:**
+***Image 2.21:***
+- The pair plot reveals that many variable combinations produce scatter plots with notably similar shapes and distribution patterns. This visual consistency suggests potential inter-variable relationships, indicating that these features may be correlated or share underlying dependencies
+  
+***Image 2.22***
+- This pair plot highlights that Volume, Turnover, and Deliverable Volume exhibit comparable distribution shapes and scatter patterns, implying a strong positive correlation. Since these features all reflect different aspects of market trading activity, their relational nature is expected
+- In contrast, %Deliverable — representing the percentage of traded shares actually settled and delivered to buyers — shows inconsistent or weaker associations with the other variables. This suggests it captures a distinct dimension of market behaviour, more closely related to settlement mechanisms than trading intensity
+
 **HeatMap**<br>
 <img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:75%;"/><br>
 Image 2.23 - HeatMap for the whole data<br>
+
+**Description:**
+- This heatmap reinforces the relationships previously observed in the pair plot. The stock price variables — including Open, High, Low, Last, Close, and VWAP — exhibit strong positive correlations with each other, confirming they move in sync and reflect similar market behavior
+- The trading activity metrics, such as Volume and Turnover, show a high degree of correlation (0.91), indicating that trading volume directly drives overall transaction value. Additionally, Deliverable Volume presents moderate correlations with both Volume (0.43) and Turnover (0.28), supporting its connection to trading intensity
+- In contrast, %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behavior — possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity
 
 ### 3. Preprocessing
 1. Scale each column to [0,1] with MinMaxScaler
