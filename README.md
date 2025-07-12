@@ -17,11 +17,11 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
 - Data ingestion & preprocessing pipeline  
 - Parameterized TensorFlow training scripts for CNN, RNN and LSTM  
 - Automated evaluation: MSE, MAE, RMSE, direction accuracy  
-- Visualization of loss curves and predicted vs. actual prices
+- Visualization of loss curves and predicted vs actual prices
 
 # Dependencies
 - TensorFlow (Builds and trains deep learning models)
-- NumPy	(Handles numerical operations and array structures)
+- NumPy (Handles numerical operations and array structures)
 - Pandas (Manages datasets, DataFrames, and preprocessing)
 - Matplotlib (Generates visualizations)
 - Seaborn (Matplotlib library, it adds styling and context-aware enhancements to plots)
@@ -74,85 +74,95 @@ Analyse the data range, trends and the relation in each column
 
   
 #### Image for Data Analyst
+<details>
+   <summary>Box plot for the whole data</summary>
+   
+   **Box plot (Stock Price Data)**:<br>
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_Open.png" style="width:60%;"/><br>
+   Image 2.1 - Box plot for Open column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_High.png" style="width:50%;"/><br>
+   Image 2.2 - Box plot for High column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_Low.png" style="width:50%;"/><br>
+   Image 2.3 - Box plot for Low column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_PrevClose.png" style="width:50%;"/><br>
+   Image 2.4 - Box plot for Prev Close column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_Close.png" style="width:50%;"/><br>
+   Image 2.5 - Box plot for Close column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_VWAP.png" style="width:50%;"/><br>
+   Image 2.6 - Box plot for VWAP column data<br>
+   
+   **Box plot (Stock Volume Data)**<br>
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_TurnOver.png" style="width:50%;"/><br>
+   Image 2.7 - Box plot for Turnover column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_Volume.png" style="width:50%;"/><br>
+   Image 2.8 - Box plot for Volume column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_DeliverableVolume.png" style="width:50%;"/><br>
+   Image 2.9 - Box plot for DeliverableVolume column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_PercentageOfDeliverable.png" style="width:50%;"/><br>
+   Image 2.10 - Box plot for %Deliverable column data<br>
+</details>
 
-**Box plot (Stock Price Data)**:<br>
-<img src="Image/Diagrams/AnalyseData/BoxPlot_Open.png" style="width:60%;"/><br>
-Image 2.1 - Box plot for Open column data<br>
+<details>
+   <summary>Time Series Chart for the whole data</summary>
+   
+   **Time Series Chart (Stock Price Data)**<br>
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Open.png" style="width:75%;"/><br>
+   Image 2.11 - Time Series Chart for Open column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_High.png" style="width:75%;"/><br>
+   Image 2.12 - Time Series Chart for High column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Low.png" style="width:75%;"/><br>
+   Image 2.13 - Time Series Chart for Low column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PrevClose.png" style="width:75%;"/><br>
+   Image 2.14 - Time Series Chart for Prev Close column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Close.png" style="width:75%;"/><br>
+   Image 2.15 - Time Series Chart for Close column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_VWAP.png" style="width:75%;"/><br>
+   Image 2.16 - Time Series Chart for VWAP column data<br>
+</details>
 
-<img src="Image/Diagrams/AnalyseData/BoxPlot_High.png" style="width:50%;"/><br>
-Image 2.2 - Box plot for High column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_Low.png" style="width:50%;"/><br>
-Image 2.3 - Box plot for Low column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_PrevClose.png" style="width:50%;"/><br>
-Image 2.4 - Box plot for Prev Close column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_Close.png" style="width:50%;"/><br>
-Image 2.5 - Box plot for Close column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_VWAP.png" style="width:50%;"/><br>
-Image 2.6 - Box plot for VWAP column data<br>
-
-**Box plot (Stock Volume Data)**<br>
-<img src="Image/Diagrams/AnalyseData/BoxPlot_Turnover.png" style="width:50%;"/><br>
-Image 2.7 - Box plot for Turnover column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_Volume.png" style="width:50%;"/><br>
-Image 2.8 - Box plot for Volume column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_DeliverableVolume.png" style="width:50%;"/><br>
-Image 2.9 - Box plot for DeliverableVolume column data<br>
-
-<img src="Image/Diagrams/AnalyseData/BoxPlot_PercentageOfDeliverable.png" style="width:50%;"/><br>
-Image 2.10 - Box plot for %Deliverable column data<br>
-
-**Time Series Chart (Stock Price Data)**<br>
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Open.png" style="width:75%;"/><br>
-Image 2.11 - Time Series Chart for Open column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_High.png" style="width:75%;"/><br>
-Image 2.12 - Time Series Chart for High column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Low.png" style="width:75%;"/><br>
-Image 2.13 - Time Series Chart for Low column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PrevClose.png" style="width:75%;"/><br>
-Image 2.14 - Time Series Chart for Prev Close column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Close.png" style="width:75%;"/><br>
-Image 2.15 - Time Series Chart for Close column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_VWAP.png" style="width:75%;"/><br>
-Image 2.16 - Time Series Chart for VWAP column data<br>
-
-**Time Series Chart (Stock Volume Data)**<br>
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_TurnOver.png" style="width:75%;"/><br>
-Image 2.17 - Time Series Chart for Turnover column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:75%;"/><br>
-Image 2.18 - Time Series Chart for Volume column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_DeliverableVolume.png" style="width:75%;"/><br>
-Image 2.19 - Time Series Chart for DeliverableVolume column data<br>
-
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:75%;"/><br>
-Image 2.20 - Time Series Chart for %Deliverable column data<br>
-
-**Pair Plot**<br>
-<img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:75%;"/><br>
-Image 2.21 - Pair Plot for Stock price related data<br>
-
-<img src="Image/Diagrams/AnalyseData/PairPlot_VolumeData.png" style="width:75%;"/><br>
-Image 2.22 - Pair Plot for Stock volume related data<br>
-
-**Description:**
-***Image 2.21:***
-- The pair plot reveals that many variable combinations produce scatter plots with similar shapes and distribution patterns. This visual consistency suggests potential inter-variable relationships, indicating that these features may be correlated or share underlying dependencies
-  
-***Image 2.22***
-- This pair plot highlights that Volume, Turnover, and Deliverable Volume exhibit comparable distribution shapes and scatter patterns, implying a strong positive correlation. Since these features all reflect different aspects of market trading activity, their relational nature is expected
-- In contrast, %Deliverable — representing the percentage of traded shares settled and delivered to buyers — shows inconsistent or weaker associations with the other variables. This suggests it captures a distinct dimension of market behaviour, more closely related to settlement mechanisms than trading intensity
+<details>
+   <summary>**Time Series Chart (Stock Volume Data)**</summary>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_TurnOver.png" style="width:75%;"/><br>
+   Image 2.17 - Time Series Chart for Turnover column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:75%;"/><br>
+   Image 2.18 - Time Series Chart for Volume column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_DeliverableVolume.png" style="width:75%;"/><br>
+   Image 2.19 - Time Series Chart for DeliverableVolume column data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:75%;"/><br>
+   Image 2.20 - Time Series Chart for %Deliverable column data<br>
+   
+   **Pair Plot**<br>
+   <img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:75%;"/><br>
+   Image 2.21 - Pair Plot for Stock price related data<br>
+   
+   <img src="Image/Diagrams/AnalyseData/PairPlot_VolumeData.png" style="width:75%;"/><br>
+   Image 2.22 - Pair Plot for Stock volume related data<br>
+   
+   **Description:**
+   ***Image 2.21:***
+   - The pair plot reveals that many variable combinations produce scatter plots with similar shapes and distribution patterns. This visual consistency suggests potential inter-variable relationships, indicating that these features may be correlated or share underlying dependencies
+     
+   ***Image 2.22***
+   - This pair plot highlights that Volume, Turnover, and Deliverable Volume exhibit comparable distribution shapes and scatter patterns, implying a strong positive correlation. Since these features all reflect different aspects of market trading activity, their relational nature is expected
+   - In contrast, %Deliverable — representing the percentage of traded shares settled and delivered to buyers — shows inconsistent or weaker associations with the other variables. This suggests it captures a distinct dimension of market behaviour, more closely related to settlement mechanisms than trading intensity
+</details>
 
 **HeatMap**<br>
 <img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:75%;"/><br>
@@ -190,160 +200,166 @@ Image 3.5 - Split the Last 20% of the data for the test
 - **LSTM**: Stacked LSTM cells with dropout
 
 #### Image for apply architectures
-<img src="Image/DataManagement/DataTraining_LSTM.png" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataTraining_LSTM.png" style="width:75%;"/><br>
 Image 4.1 - Source Code about LSTM Application
 
-<img src="Image/DataManagement/DataTraining_RNN.png" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataTraining_RNN.png" style="width:75%;"/><br>
 Image 4.2 - Source Code about RNN Application
 
-<img src="Image/DataManagement/DataTraining_CNN.png" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
 Image 4.3 - Source Code about CNN Application
 
+<details>
+   <summary>Result of stock data prediction (LSTM) - Stock Price Data</summary>
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:75%;"/><br>
+   Image 4.4 - LSTM Data prediction Result - Open
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:75%;"/><br>
+   Image 4.5 - LSTM Data prediction Result - High
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:75%;"/><br>
+   Image 4.6 - LSTM Data prediction Result - Low
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:75%;"/><br>
+   Image 4.7 - LSTM Data prediction Result - Prev Close
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:75%;"/><br>
+   Image 4.8 - LSTM Data prediction Result - Close
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VWAP_LSTM.png" style="width:75%;"/><br>
+   Image 4.9 - LSTM Data prediction Result - VWAP
+   
+   ****Description:****
+   - This diagram compares the actual and predicted values of the stock prices using an LSTM model. The blue line represents actual prices, while the orange dashed line shows the model's predictions.
+   - The chart shows that the predicted line mirrors the general trend of the actual prices — rising and falling in roughly the same places — which suggests the model effectively learns directional movement
+   - However, there's visible divergence in timing and amplitude:
+      - The model sometimes lags behind sudden shifts
+      - The predicted line doesn’t fully replicate sharp peaks and drops in the actual values
+   - This mismatch could be due to a few factors:
+      - LSTM’s memory limitations in capturing sudden volatility
+      - Lack of external features (like macroeconomic signals or news sentiment) to explain abrupt changes
+      - Or just the inherent unpredictability of stock prices that can't be learned from past prices alone
+   </details>
+   
+<details>
+   <summary>Result of stock data prediction (LSTM) - Stock Volume Data</summary>
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:75%;"/><br>
+   Image 4.10 - LSTM Data prediction Result - Volume
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:75%;"/><br>
+   Image 4.11 - LSTM Data prediction Result - Turnover
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:75%;"/><br>
+   Image 4.12 - LSTM Data prediction Result - Deliverable Volume
+   
+   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:75%;"/><br>
+   Image 4.13 - LSTM Data prediction Result - %Deliverable
+   
+   ****Description:**** <br>
+   - While the LSTM model successfully captures the underlying baseline of volume-related data, it lacks sensitivity to sudden surges or dips. This shortcoming is likely becausee is often driven by short-term catalysts, such as company news, earnings releases, or macroeconomic shocks — none of which are encoded in historical OHLCV data alone
+   - Consequently, the model’s predictions appear muted during periods of heightened activity, underscoring the need for exogenous features or alternative architectures to reflect the dynamic nature of trading volume better
+</details>
 
-#### Result of stock data prediction (LSTM) - Stock Price Data
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:75%;"/><br>
-Image 4.4 - LSTM Data prediction Result - Open
+<details>
+   <summary>Result of stock data prediction (RNN) - Stock Price Data</summary>
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Open_RNN.png" style="width:75%;"/><br>
+   Image 4.14 - RNN Data prediction Result - Open
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_High_RNN.png" style="width:75%;"/><br>
+   Image 4.15 - RNN Data prediction Result - High
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Low_RNN.png" style="width:75%;"/><br>
+   Image 4.16 - RNN Data prediction Result - Low
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PrevClose_RNN.png" style="width:75%;"/><br>
+   Image 4.17 - RNN Data prediction Result - Prev Close
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Close_RNN.png" style="width:75%;"/><br>
+   Image 4.18 - RNN Data prediction Result - Close
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_VWAP_RNN.png" style="width:75%;"/><br>
+   Image 4.19 - RNN Data prediction Result - VWAP
+   
+   ****Description:****
+   - The overall trend between both lines aligns closely, especially during gradual movements, demonstrating the model’s ability to capture the directional flow of the data
+   - However, minor mismatches appear during sharp spikes or dips — a reflection of the model forecasting based only on historical values, without external signals
+</details>
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:75%;"/><br>
-Image 4.5 - LSTM Data prediction Result - High
+<details>
+   <summary>Result of stock data prediction (RNN) - Stock Volume Data</summary>
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Volume_RNN.png" style="width:75%;"/><br>
+   Image 4.20 - RNN Data prediction Result - Volume
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Turnover_RNN.png" style="width:75%;"/><br>
+   Image 4.21 - RNN Data prediction Result - Turnover
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_DeliverableVolume_RNN.png" style="width:75%;"/><br>
+   Image 4.22 - RNN Data prediction Result - Deliverable Volume
+   
+   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PercentageOfDeliverable_RNN.png" style="width:75%;"/><br>
+   Image 4.23 - RNN Data prediction Result - %Deliverable
+   
+   ****Description:**** <br>
+   For others:
+   - While the RNN captures the broad structure of turnover trends, it underreacts to significant fluctuations, missing key surges in trading volume
+   - This gap highlights a limitation of using recursive RNN predictions on high-volatility financial features — the model doesn't integrate sudden market catalysts like earnings surprises or macroeconomic shifts
+   
+   For %Deliverable Data:
+   - The prediction curve stays relatively close to the average trend of the actual data, showing that the model captures broad directional movement
+   - However, significant variance exists during abrupt fluctuations — the model fails to replicate sharp spikes or sudden drops
+</details>
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:75%;"/><br>
-Image 4.6 - LSTM Data prediction Result - Low
+<details>
+   <summary>Result of stock data prediction (CNN) - Stock Price Data</summary>
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Open_CNN.png" style="width:75%;"/><br>
+   Image 4.24 - CNN Data prediction Result - Open
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_High_CNN.png" style="width:75%;"/><br>
+   Image 4.25 - CNN Data prediction Result - High
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Low_CNN.png" style="width:75%;"/><br>
+   Image 4.16 - RNN Data prediction Result - Low
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PrevClose_CNN.png" style="width:75%;"/><br>
+   Image 4.17 - CNN Data prediction Result - Prev Close
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Close_CNN.png" style="width:75%;"/><br>
+   Image 4.18 - CNN Data prediction Result - Close
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_VWAP_CNN.png" style="width:75%;"/><br>
+   Image 4.19 - CNN Data prediction Result - VWAP
+   
+   ****Description:****
+   - The model successfully learns and tracks the overall price trend — particularly during steady climbs and dips.
+   - However, it occasionally lags behind major price shifts, failing to fully capture the amplitude of sharp market movements.
+   - This pattern reveals CNN’s strength in recognizing patterns from local data windows, but also its limits in modeling long-term temporal dependencies — a known constraint when predicting volatile time series like stock prices.
+</details>
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:75%;"/><br>
-Image 4.7 - LSTM Data prediction Result - Prev Close
-
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:75%;"/><br>
-Image 4.8 - LSTM Data prediction Result - Close
-
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VWAP_LSTM.png" style="width:75%;"/><br>
-Image 4.9 - LSTM Data prediction Result - VWAP
-
-****Description:****
-- This diagram compares the actual and predicted values of the stock prices using an LSTM model. The blue line represents actual prices, while the orange dashed line shows the model's predictions.
-- The chart shows that the predicted line mirrors the general trend of the actual prices — rising and falling in roughly the same places — which suggests the model effectively learns directional movement
-- However, there's visible divergence in timing and amplitude:
-   - The model sometimes lags behind sudden shifts
-   - The predicted line doesn’t fully replicate sharp peaks and drops in the actual values
-- This mismatch could be due to a few factors:
-   - LSTM’s memory limitations in capturing sudden volatility
-   - Lack of external features (like macroeconomic signals or news sentiment) to explain abrupt changes
-   - Or just the inherent unpredictability of stock prices that can't be learned from past prices alone
-
-
-#### Result of stock data prediction (LSTM) - Stock Volume Data
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:75%;"/><br>
-Image 4.10 - LSTM Data prediction Result - Volume
-
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:75%;"/><br>
-Image 4.11 - LSTM Data prediction Result - Turnover
-
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:75%;"/><br>
-Image 4.12 - LSTM Data prediction Result - Deliverable Volume
-
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:75%;"/><br>
-Image 4.13 - LSTM Data prediction Result - %Deliverable
-
-****Description:****
-- While the LSTM model successfully captures the underlying baseline of volume-related data, it lacks sensitivity to sudden surges or dips. This shortcoming is likely becausee is often driven by short-term catalysts, such as company news, earnings releases, or macroeconomic shocks — none of which are encoded in historical OHLCV data alone
-- Consequently, the model’s predictions appear muted during periods of heightened activity, underscoring the need for exogenous features or alternative architectures to reflect the dynamic nature of trading volume better
-
-
-#### Result of stock data prediction (RNN) - Stock Price Data
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Open_RNN.png" style="width:75%;"/><br>
-Image 4.14 - RNN Data prediction Result - Open
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_High_RNN.png" style="width:75%;"/><br>
-Image 4.15 - RNN Data prediction Result - High
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Low_RNN.png" style="width:75%;"/><br>
-Image 4.16 - RNN Data prediction Result - Low
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PrevClose_RNN.png" style="width:75%;"/><br>
-Image 4.17 - RNN Data prediction Result - Prev Close
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Close_RNN.png" style="width:75%;"/><br>
-Image 4.18 - RNN Data prediction Result - Close
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_VWAP_RNN.png" style="width:75%;"/><br>
-Image 4.19 - RNN Data prediction Result - VWAP
-
-****Description:****
-- The overall trend between both lines aligns closely, especially during gradual movements, demonstrating the model’s ability to capture the directional flow of the data
-- However, minor mismatches appear during sharp spikes or dips — a reflection of the model forecasting based only on historical values, without external signals
-
-
-#### Result of stock data prediction (RNN) - Stock Volume Data
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Volume_RNN.png" style="width:75%;"/><br>
-Image 4.20 - RNN Data prediction Result - Volume
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Turnover_RNN.png" style="width:75%;"/><br>
-Image 4.21 - RNN Data prediction Result - Turnover
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_DeliverableVolume_RNN.png" style="width:75%;"/><br>
-Image 4.22 - RNN Data prediction Result - Deliverable Volume
-
-<img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PercentageOfDeliverable_RNN.png" style="width:75%;"/><br>
-Image 4.23 - RNN Data prediction Result - %Deliverable
-
-****Description:****
-For others:
-- While the RNN captures the broad structure of turnover trends, it underreacts to significant fluctuations, missing key surges in trading volume
-- This gap highlights a limitation of using recursive RNN predictions on high-volatility financial features — the model doesn't integrate sudden market catalysts like earnings surprises or macroeconomic shifts
-
-For %Deliverable Data:
-- The prediction curve stays relatively close to the average trend of the actual data, showing that the model captures broad directional movement
-- However, significant variance exists during abrupt fluctuations — the model fails to replicate sharp spikes or sudden drops
-
-
-#### Result of stock data prediction (CNN) - Stock Price Data
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Open_CNN.png" style="width:75%;"/><br>
-Image 4.24 - CNN Data prediction Result - Open
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_High_CNN.png" style="width:75%;"/><br>
-Image 4.25 - CNN Data prediction Result - High
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Low_CNN.png" style="width:75%;"/><br>
-Image 4.16 - RNN Data prediction Result - Low
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PrevClose_CNN.png" style="width:75%;"/><br>
-Image 4.17 - CNN Data prediction Result - Prev Close
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Close_CNN.png" style="width:75%;"/><br>
-Image 4.18 - CNN Data prediction Result - Close
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_VWAP_CNN.png" style="width:75%;"/><br>
-Image 4.19 - CNN Data prediction Result - VWAP
-
-****Description:****
-- The model successfully learns and tracks the overall price trend — particularly during steady climbs and dips.
-- However, it occasionally lags behind major price shifts, failing to fully capture the amplitude of sharp market movements.
-- This pattern reveals CNN’s strength in recognizing patterns from local data windows, but also its limits in modeling long-term temporal dependencies — a known constraint when predicting volatile time series like stock prices.
-
-#### Result of stock data prediction (RNN) - Stock Volume Data
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Volume_CNN.png" style="width:75%;"/><br>
-Image 4.20 - CNN Data prediction Result - Volume
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Turnover_CNN.png" style="width:75%;"/><br>
-Image 4.21 - CNN Data prediction Result - Turnover
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_DeliverableVolume_CNN.png" style="width:75%;"/><br>
-Image 4.22 - CNN Data prediction Result - Deliverable Volume
-
-<img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PercentageOfDeliverable_CNN.png" style="width:75%;"/><br>
-Image 4.23 - CNN Data prediction Result - %Deliverable
-
-****Description:****
-For others:
-- The CNN model maintains a mostly flat prediction line, significantly underestimating the actual turnover dynamics.
-- Meanwhile, the real data shows prominent spikes and shifts—especially around early 2021—indicating periods of intense trading activity that the model fails to reflect.
-- This visual highlights CNN’s difficulty with capturing large-scale fluctuations in turnover, likely due to its limited temporal awareness and lack of external contextual features like earnings events, investor sentiment, or economic indicators.
-
-For %Deliverable:
-- The CNN model captures the general baseline trend, aligning with the average level of deliverability during stable periods. 
-- However, it underperforms during volatile changes, especially failing to reproduce sharp spikes or rapid drops in real data.
-- This highlights CNN’s limitation in forecasting noisy time series with high-frequency variation (While it detects patterns within short windows, it struggles to track abrupt deviations unless supplemented with external features)
-
+<details>
+   <summary>Result of stock data prediction (CNN) - Stock Volume Data</summary>
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Volume_CNN.png" style="width:75%;"/><br>
+   Image 4.20 - CNN Data prediction Result - Volume
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Turnover_CNN.png" style="width:75%;"/><br>
+   Image 4.21 - CNN Data prediction Result - Turnover
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_DeliverableVolume_CNN.png" style="width:75%;"/><br>
+   Image 4.22 - CNN Data prediction Result - Deliverable Volume
+   
+   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PercentageOfDeliverable_CNN.png" style="width:75%;"/><br>
+   Image 4.23 - CNN Data prediction Result - %Deliverable
+   
+   ****Description:****
+   For others:
+   - The CNN model maintains a mostly flat prediction line, significantly underestimating the actual turnover dynamics.
+   - Meanwhile, the real data shows prominent spikes and shifts—especially around early 2021—indicating periods of intense trading activity that the model fails to reflect.
+   - This visual highlights CNN’s difficulty with capturing large-scale fluctuations in turnover, likely due to its limited temporal awareness and lack of external contextual features like earnings events, investor sentiment, or economic indicators.
+   
+   For %Deliverable:
+   - The CNN model captures the general baseline trend, aligning with the average level of deliverability during stable periods. 
+   - However, it underperforms during volatile changes, especially failing to reproduce sharp spikes or rapid drops in real data.
+   - This highlights CNN’s limitation in forecasting noisy time series with high-frequency variation (While it detects patterns within short windows, it struggles to track abrupt deviations unless supplemented with external features)
+</details>
 ## License
 MIT License
 
