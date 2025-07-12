@@ -190,6 +190,7 @@ Image 4.2 - Source Code about RNN Application
 <img src="Image/DataManagement/DataTraining_CNN.png" style="width:60%;"/><br>
 Image 4.3 - Source Code about CNN Application
 
+
 #### Result of stock data prediction (LSTM) - Stock Price Data
 <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:75%;"/><br>
 Image 4.4 - LSTM Data prediction Result - Open
@@ -210,7 +211,15 @@ Image 4.8 - LSTM Data prediction Result - Close
 Image 4.9 - LSTM Data prediction Result - VWAP
 
 ****Description:****
-- <br>
+- This diagram compares the actual and predicted values of the stock prices using an LSTM model. The blue line represents actual prices, while the orange dashed line shows the model's predictions. The chart shows that the predicted line mirrors the general trend of the actual prices — rising and falling in roughly the same places — which suggests the model effectively learns directional movement
+- However, there's visible divergence in timing and amplitude:
+   - The model sometimes lags behind sudden shifts
+   - The predicted line doesn’t fully replicate sharp peaks and drops in the actual values
+- This mismatch could be due to a few factors:
+   - LSTM’s memory limitations in capturing sudden volatility
+   - Lack of external features (like macroeconomic signals or news sentiment) to explain abrupt changes
+   - Or just the inherent unpredictability of stock prices that can't be learned from past prices alone
+
 
 #### Result of stock data prediction (LSTM) - Stock Volume Data
 <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:75%;"/><br>
@@ -226,7 +235,56 @@ Image 4.12 - LSTM Data prediction Result - Deliverable Volume
 Image 4.13 - LSTM Data prediction Result - %Deliverable
 
 ****Description:****
-- <br>
+- While the LSTM model successfully captures the underlying baseline of volume-related data, it lacks sensitivity to sudden surges or dips. This shortcoming is likely becausee is often driven by short-term catalysts, such as company news, earnings releases, or macroeconomic shocks — none of which are encoded in historical OHLCV data alone
+- Consequently, the model’s predictions appear muted during periods of heightened activity, underscoring the need for exogenous features or alternative architectures to reflect the dynamic nature of trading volume better
+
+
+#### Result of stock data prediction (RNN) - Stock Price Data
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_RNN.png" style="width:75%;"/><br>
+Image 4.14 - RNN Data prediction Result - Open
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_RNN.png" style="width:75%;"/><br>
+Image 4.15 - RNN Data prediction Result - High
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_RNN.png" style="width:75%;"/><br>
+Image 4.16 - RNN Data prediction Result - Low
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_RNN.png" style="width:75%;"/><br>
+Image 4.17 - RNN Data prediction Result - Prev Close
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_RNN.png" style="width:75%;"/><br>
+Image 4.18 - RNN Data prediction Result - Close
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VWAP_LRNN.png" style="width:75%;"/><br>
+Image 4.19 - RNN Data prediction Result - VWAP
+
+****Description:****
+- The overall trend between both lines aligns closely, especially during gradual movements, demonstrating the model’s ability to capture the directional flow of the data
+- However, minor mismatches appear during sharp spikes or dips — a reflection of the model forecasting based only on historical values, without external signals
+
+
+#### Result of stock data prediction (RNN) - Stock Volume Data
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_RNN.png" style="width:75%;"/><br>
+Image 4.20 - RNN Data prediction Result - Volume
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_RNN.png" style="width:75%;"/><br>
+Image 4.21 - RNN Data prediction Result - Turnover
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_RNN.png" style="width:75%;"/><br>
+Image 4.22 - RNN Data prediction Result - Deliverable Volume
+
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_RNN.png" style="width:75%;"/><br>
+Image 4.23 - RNN Data prediction Result - %Deliverable
+
+****Description:****
+For others:
+- While the RNN captures the broad structure of turnover trends, it underreacts to significant fluctuations, missing key surges in trading volume
+- This gap highlights a limitation of using recursive RNN predictions on high-volatility financial features — the model doesn't integrate sudden market catalysts like earnings surprises or macroeconomic shifts
+
+For %Deliverable Data:
+- The prediction curve stays relatively close to the average trend of the actual data, showing that the model captures broad directional movement
+- However, significant variance exists during abrupt fluctuations — the model fails to replicate sharp spikes or sudden drops
+
 
 ## Dependencies
 - TensorFlow  
