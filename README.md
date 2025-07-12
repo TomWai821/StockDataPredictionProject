@@ -129,15 +129,15 @@ Image 2.19 - Time Series Chart for DeliverableVolume column data<br>
 <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:50%;"/><br>
 Image 2.20 - Time Series Chart for %Deliverable column data<br>
 
-**Pair Plot**
+**Pair Plot**<br>
 <img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:50%;"/><br>
 Image 2.21 - Pair Plot for Stock price related data<br>
 
 <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:50%;"/><br>
 Image 2.22 - Pair Plot for Stock volume related data<br>
 
-**HeatMap**
-<img src="Image/DataManagement/HeatMap_StockData.png" style="width:50%;"/><br>
+**HeatMap**<br>
+<img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:50%;"/><br>
 Image 2.23 - HeatMap for the whole data<br>
 
 ### 3. Preprocessing
