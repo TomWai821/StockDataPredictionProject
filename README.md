@@ -367,6 +367,7 @@ Image 4.3 - Source Code about CNN Application
    - However, it underperforms during volatile changes, especially failing to reproduce sharp spikes or rapid drops in real data.
    - This highlights CNN’s limitation in forecasting noisy time series with high-frequency variation (While it detects patterns within short windows, it struggles to track abrupt deviations unless supplemented with external features)
 </details>
+
 ## License
 MIT License
 
