@@ -66,7 +66,7 @@ Analyse the data range, trends and the relation in each column
 
 #### Image for Data Analyst
 **Box plot (Stock Price Data)**:<br>
-<img src="Image/Diagrams/AnalyseData/BoxPlot_Open.png" style="width:50%;"/><br>
+<img src="Image/Diagrams/AnalyseData/BoxPlot_Open.png" style="width:60%;"/><br>
 Image 2.1 - Box plot for Open column data<br>
 
 <img src="Image/Diagrams/AnalyseData/BoxPlot_High.png" style="width:50%;"/><br>
@@ -130,14 +130,14 @@ Image 2.19 - Time Series Chart for DeliverableVolume column data<br>
 Image 2.20 - Time Series Chart for %Deliverable column data<br>
 
 **Pair Plot**<br>
-<img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:75%;"/><br>
 Image 2.21 - Pair Plot for Stock price related data<br>
 
-<img src="Image/Diagrams/AnalyseData/PairPlot_VolumeData.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/PairPlot_VolumeData.png" style="width:75%;"/><br>
 Image 2.22 - Pair Plot for Stock volume related data<br>
 
 **HeatMap**<br>
-<img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:75%;"/><br>
 Image 2.23 - HeatMap for the whole data<br>
 
 ### 3. Preprocessing
