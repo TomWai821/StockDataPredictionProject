@@ -45,16 +45,16 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
    - Volume indicators: Volume, Turnover, Deliverable Volume, %Deliverable
  
 #### Image for data
-<img src="Image/DataManagement/DataFiltering.png" style="width:50%;"/><br>
+<img src="Image/DataManagement/DataFiltering.png" style="width:60%;"/><br>
 Image 1.1 - Filter out not useful data and set csv file data to dataframe<br>
 
-<img src="Image/DataManagement/DataFrameColumnsAndShape.png" style="width:45%;"/><br>
+<img src="Image/DataManagement/DataFrameColumnsAndShape.png" style="width:60%;"/><br>
 Image 1.2 - Column in dataframe and the shape of dataframe<br>
 
-<img src="Image/DataManagement/DataDescription.png" style="width:55%;"/><br>
+<img src="Image/DataManagement/DataDescription.png" style="width:50%;"/><br>
 Image 1.3 - Data description for each column<br>
 
-<img src="Image/DataManagement/GroupUpData.png" style="width:45%;"/><br>
+<img src="Image/DataManagement/GroupUpData.png" style="width:50%;"/><br>
 Image 1.4 - Group up the data to priceData and volumeData (used for data analyst before data training)
 
 ### 2. Data Analyst
@@ -98,46 +98,46 @@ Image 2.9 - Box plot for DeliverableVolume column data<br>
 Image 2.10 - Box plot for %Deliverable column data<br>
 
 **Time Series Chart (Stock Price Data)**<br>
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Open.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Open.png" style="width:75%;"/><br>
 Image 2.11 - Time Series Chart for Open column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_High.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_High.png" style="width:75%;"/><br>
 Image 2.12 - Time Series Chart for High column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Low.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Low.png" style="width:75%;"/><br>
 Image 2.13 - Time Series Chart for Low column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PrevClose.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PrevClose.png" style="width:75%;"/><br>
 Image 2.14 - Time Series Chart for Prev Close column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Close.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Close.png" style="width:75%;"/><br>
 Image 2.15 - Time Series Chart for Close column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_VWAP.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_VWAP.png" style="width:75%;"/><br>
 Image 2.16 - Time Series Chart for VWAP column data<br>
 
 **Time Series Chart (Stock Volume Data)**<br>
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Turnover.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Turnover.png" style="width:75%;"/><br>
 Image 2.17 - Time Series Chart for Turnover column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:75%;"/><br>
 Image 2.18 - Time Series Chart for Volume column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_DeliverableVolume.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_DeliverableVolume.png" style="width:75%;"/><br>
 Image 2.19 - Time Series Chart for DeliverableVolume column data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:75%;"/><br>
 Image 2.20 - Time Series Chart for %Deliverable column data<br>
 
 **Pair Plot**<br>
-<img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:50%;"/><br>
+<img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:60%;"/><br>
 Image 2.21 - Pair Plot for Stock price related data<br>
 
-<img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:50%;"/><br>
+<img src="Image/Diagrams/AnalyseData/PairPlot_VolumeData.png" style="width:60%;"/><br>
 Image 2.22 - Pair Plot for Stock volume related data<br>
 
 **HeatMap**<br>
-<img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:50%;"/><br>
+<img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:60%;"/><br>
 Image 2.23 - HeatMap for the whole data<br>
 
 ### 3. Preprocessing
