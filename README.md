@@ -51,19 +51,21 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
    - Date
    - Price indicators: Open, High, Low, Last, Close, VWAP 
    - Volume indicators: Volume, Turnover, Deliverable Volume, %Deliverable
- 
-#### Image for data
-<img src="Image/DataManagement/DataFiltering.png" style="width:60%;"/><br>
-Image 1.1 - Filter out not useful data and set the CSV file data to a dataframe<br>
 
-<img src="Image/DataManagement/DataFrameColumnsAndShape.png" style="width:60%;"/><br>
-Image 1.2 - Column in dataframe and the shape of dataframe<br>
-
-<img src="Image/DataManagement/DataDescription.png" style="width:50%;"/><br>
-Image 1.3 - Data description for each column<br>
-
-<img src="Image/DataManagement/GroupUpData.png" style="width:50%;"/><br>
-Image 1.4 - Group up the data to priceData and volumeData (used for the data analyst before data training)
+<details>
+<summary>Image for data</summary>
+   <img src="Image/DataManagement/DataFiltering.png" style="width:60%;"/><br>
+   Image 1.1 - Filter out not useful data and set the CSV file data to a dataframe<br>
+   
+   <img src="Image/DataManagement/DataFrameColumnsAndShape.png" style="width:60%;"/><br>
+   Image 1.2 - Column in dataframe and the shape of dataframe<br>
+   
+   <img src="Image/DataManagement/DataDescription.png" style="width:50%;"/><br>
+   Image 1.3 - Data description for each column<br>
+   
+   <img src="Image/DataManagement/GroupUpData.png" style="width:50%;"/><br>
+   Image 1.4 - Group up the data to priceData and volumeData (used for the data analyst before data training)
+</details>
 
 ### 2. Data Analyst
 Analyse the data range, trends and the relation in each column
@@ -134,7 +136,7 @@ Analyse the data range, trends and the relation in each column
 </details>
 
 <details>
-   <summary>**Time Series Chart (Stock Volume Data)**</summary>
+   <summary>Time Series Chart (Stock Volume Data)</summary>
    
    <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_TurnOver.png" style="width:75%;"/><br>
    Image 2.17 - Time Series Chart for Turnover column data<br>
@@ -147,8 +149,11 @@ Analyse the data range, trends and the relation in each column
    
    <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_PercentageOfDeliverable.png" style="width:75%;"/><br>
    Image 2.20 - Time Series Chart for %Deliverable column data<br>
-   
-   **Pair Plot**<br>
+</details>
+
+
+<details>
+   <summary>Pair Plot</summary>
    <img src="Image/Diagrams/AnalyseData/PairPlot_PriceData.png" style="width:75%;"/><br>
    Image 2.21 - Pair Plot for Stock price related data<br>
    
@@ -164,21 +169,24 @@ Analyse the data range, trends and the relation in each column
    - In contrast, %Deliverable — representing the percentage of traded shares settled and delivered to buyers — shows inconsistent or weaker associations with the other variables. This suggests it captures a distinct dimension of market behaviour, more closely related to settlement mechanisms than trading intensity
 </details>
 
-**HeatMap**<br>
-<img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:75%;"/><br>
-Image 2.23 - HeatMap for the whole data<br>
-
-**Description:**
-- This heatmap reinforces the relationships previously observed in the pair plot. The stock price variables — including Open, High, Low, Last, Close, and VWAP — exhibit strong positive correlations with each other, confirming they move in sync and reflect similar market behaviour
-- The trading activity metrics, such as Volume and Turnover, show a high correlation (0.91), indicating that trading volume directly drives overall transaction value. Additionally, Deliverable Volume presents moderate correlations with both Volume (0.43) and Turnover (0.28), supporting its connection to trading intensity
-- In contrast, %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behavior, possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity
+<details>
+   <summary>HeatMap</summary>
+   <img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:75%;"/><br>
+   Image 2.23 - HeatMap for the whole data<br>
+   
+   **Description:**
+   - This heatmap reinforces the relationships previously observed in the pair plot. The stock price variables — including Open, High, Low, Last, Close, and VWAP — exhibit strong positive correlations with each other, confirming they move in sync and reflect similar market behaviour
+   - The trading activity metrics, such as Volume and Turnover, show a high correlation (0.91), indicating that trading volume directly drives overall transaction value. Additionally, Deliverable Volume presents moderate correlations with both Volume (0.43) and Turnover (0.28), supporting its connection to trading intensity
+   - In contrast, %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behavior, possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity
+</details>
 
 ### 3. Preprocessing
 1. Scale each column to [0,1] with MinMaxScaler
 2. Window into 60-day input sequences for supervised learning
 3. Split 80% train / 20% test<br>
 
-#### Image for Preprocessing
+<details>
+   <summary>Image for Preprocessing</summary>
 <img src="Image/DataManagement/DataProcessingWithMinMaxScaler.png" style="width:50%;"/><br>
 Image 3.1 - Apply MinMaxScaler<br>
 
@@ -208,6 +216,7 @@ Image 4.2 - Source Code about RNN Application
 
 <img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
 Image 4.3 - Source Code about CNN Application
+</details>
 
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Price Data</summary>
