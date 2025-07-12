@@ -181,50 +181,52 @@ Image 3.5 - Split the Last 20% of the data for the test
 - **LSTM**: Stacked LSTM cells with dropout
 
 #### Image for apply architectures
-<img src="Image/DataManagement/DataTraining_LSTM" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataTraining_LSTM.png" style="width:60%;"/><br>
 Image 4.1 - Source Code about LSTM Application
 
-<img src="Image/DataManagement/DataTraining_RNN" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataTraining_RNN.png" style="width:60%;"/><br>
 Image 4.2 - Source Code about RNN Application
 
-<img src="Image/DataManagement/DataTraining_CNN" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataTraining_CNN.png" style="width:60%;"/><br>
 Image 4.3 - Source Code about CNN Application
 
 #### Result of stock data prediction (LSTM) - Stock Price Data
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:75%;"/><br>
 Image 4.4 - LSTM Data prediction Result - Open
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:75%;"/><br>
 Image 4.5 - LSTM Data prediction Result - High
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:75%;"/><br>
 Image 4.6 - LSTM Data prediction Result - Low
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:75%;"/><br>
 Image 4.7 - LSTM Data prediction Result - Prev Close
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:75%;"/><br>
 Image 4.8 - LSTM Data prediction Result - Close
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VMAP_LSTM.png" style="width:60%;"/><br>
-Image 4.9 - LSTM Data prediction Result - VMAP
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VWAP_LSTM.png" style="width:75%;"/><br>
+Image 4.9 - LSTM Data prediction Result - VWAP
 
 ****Description:****
+- <br>
 
 #### Result of stock data prediction (LSTM) - Stock Volume Data
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:75%;"/><br>
 Image 4.10 - LSTM Data prediction Result - Volume
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:75%;"/><br>
 Image 4.11 - LSTM Data prediction Result - Turnover
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:75%;"/><br>
 Image 4.12 - LSTM Data prediction Result - Deliverable Volume
 
-<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:60%;"/><br>
+<img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:75%;"/><br>
 Image 4.13 - LSTM Data prediction Result - %Deliverable
 
 ****Description:****
+- <br>
 
 ## Dependencies
 - TensorFlow  
