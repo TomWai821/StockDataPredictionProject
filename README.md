@@ -51,6 +51,22 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
    - Date
    - Price indicators: Open, High, Low, Last, Close, VWAP 
    - Volume indicators: Volume, Turnover, Deliverable Volume, %Deliverable
+ 
+<details>
+   <summary>Data column naming description</summary>
+   ****Stock Price Indicators:****<br>
+   - Open: The first traded price of the stock when the market opens for the day
+   - High: The highest price reached during the trading session
+   - Low: The lowest price traded throughout the session
+   - Last: The final price at which the stock was traded before market close
+   - Close: Official end-of-day price, often used for technical analysis
+   - VWAP: Volume Weighted Average Price – the average price adjusted for volume; reflects true market value throughout the day
+   ****Stock Volume Indicators:****<br>
+   - Volume: Total number of shares traded over a time period
+   - Turnover: The total monetary value of shares traded (Volume × Price)
+   - Deliverable Volume: Portion of traded shares that are settled (not squared off intra-day)
+   - %Deliverable: Ratio of deliverable volume to total volume – indicates investor conviction
+</details>
 
 <details>
 <summary>Image for data</summary>
@@ -175,7 +191,7 @@ Analyse the data range, trends and the relation in each column
    **Description:**
    - This heatmap reinforces the relationships previously observed in the pair plot. The stock price variables — including Open, High, Low, Last, Close, and VWAP — exhibit strong positive correlations with each other, confirming they move in sync and reflect similar market behaviour
    - The trading activity metrics, such as Volume and Turnover, show a high correlation (0.91), indicating that trading volume directly drives overall transaction value. Additionally, Deliverable Volume presents moderate correlations with both Volume (0.43) and Turnover (0.28), supporting its connection to trading intensity
-   - In contrast, %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behavior, possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity
+   - In contrast, %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behaviour, possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity
 </details>
 
 ### 3. Preprocessing
@@ -366,6 +382,95 @@ Image 4.3 - Source Code about CNN Application
    - The CNN model captures the general baseline trend, aligning with the average level of deliverability during stable periods. 
    - However, it underperforms during volatile changes, especially failing to reproduce sharp spikes or rapid drops in real data.
    - This highlights CNN’s limitation in forecasting noisy time series with high-frequency variation (While it detects patterns within short windows, it struggles to track abrupt deviations unless supplemented with external features)
+</details>
+
+#### 5. Forecast Data Comparison<br>
+To evaluate the performance and reliability of the predictive models, I would compared their outputs against actual observed values using the Mean Absolute Error (MAE) as the primary metric
+- MAE provides an intuitive measure of prediction accuracy by quantifying the average deviation between estimated and true values
+- A lower MAE indicates greater precision in the model’s forecasts, making it a valuable benchmark for comparison across different approaches and datasets
+
+<details>
+   <summary>Source Code for Data Comparsion</summary>
+   <img src="/Image/DataManagement/CalculateBestModel.png" style="width:75%;"/><br>
+   Image 5.1 - Source Code for data comparison
+
+   ****Description:****<br>
+</details>
+
+
+<details>
+   <summary>Image for Data Comparison</summary>
+   <details>
+   <summary>Data Comparison (Stock Price Data)</summary>
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Open_FinalResult.png" style="width:75%;"/><br>
+   Image 5.2 - Data Comparison Result - Open
+      
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_High_FinalResult.png" style="width:75%;"/><br>
+   Image 5.3 - Data Comparison Result - High
+      
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Low_FinalResult.png" style="width:75%;"/><br>
+   Image 5.4 - Data Comparison Result - Low
+      
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_PrevClose_FinalResult.png" style="width:75%;"/><br>
+   Image 5.5 - Data Comparison Result - Prev Close
+      
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Close_FinalResult.png" style="width:75%;"/><br>
+   Image 5.6 - Data Comparison Result - Close
+      
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_VWAP_FinalResult.png" style="width:75%;"/><br>
+   Image 5.7 - Data Comparison Result - VWAP<br>
+   
+   ****Description:****<br>
+
+   - The RNN model shows strong predictive performance across six stock price attributes: Prev Close, Open, High, Low, Close, and VWAP
+      - For each metric, the forecast curve closely aligns with actual values, maintaining smooth temporal behaviour with minimal lag or noise
+      - The consistent prediction quality across all diagrams emphasizes the model's capacity to learn and replicate market price dynamics — even during volatile periods
+   - The uniformity in results reinforces the RNN’s dependability for price-based forecasting tasks
+
+   ****Conclusion:****<br>
+   - The model provides consistently accurate forecasts across all price metrics, showcasing the robustness of the RNN approach
+   - When combined with strong performance in volume-related indicators, the model demonstrates its value as a comprehensive forecasting tool for both liquidity and price movements in financial markets
+   </details>
+
+   <details>
+   <summary>Data Comparison (Stock Volume Data)</summary>
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Volume_FinalResult.png" style="width:75%;"/><br>
+   Image 5.8 - Data Comparison Result - Volume
+   
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Turnover_FinalResult.png" style="width:75%;"/><br>
+   Image 5.9 - Data Comparison Result - Turnover
+   
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_DeliverableVolume_FinalResult.png" style="width:75%;"/><br>
+   Image 5.10 - Data Comparison Result - Deliverable Volume
+   
+   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_PercentageOfDeliverable_FinalResult.png" style="width:75%;"/><br>
+   Image 5.11 - Data Comparison Result - %Deliverable<br>
+
+   ****Description:****<br>
+   - Volume – Actual vs Prediction (Best: RNN)
+      - The RNN effectively tracks trading volume patterns, showing strong alignment with recent fluctuations. Any divergences highlight where market behaviour deviated from historical trends captured by the model
+
+   - Turnover – Actual vs Prediction (Best: RNN)
+      - The predicted turnover closely mirrors actual performance, indicating the model's sensitivity to high-value transactions. Useful for understanding cash flow intensity on trading days
+
+   - Deliverable Volume – Actual vs Prediction (Best: RNN)
+      - The model excels in identifying deliverable activity, which may reflect investor confidence or long-term interest. Minor prediction errors here could relate to sudden shifts in speculative trading
+
+   - %Deliverable – Actual vs Prediction (Best: RNN)
+      - This metric is more stable and reflects underlying market sentiment. The model’s prediction maintains a consistent trend, confirming its reliability in forecasting investor behaviour
+    
+   ****Conclusion:****<br>
+   - Overall, the RNN model demonstrates high accuracy across all volume-related metrics, making it a strong candidate for anticipating future trading behaviour
+   </details>
+
+   ****Summary:****<br>
+   - The RNN model consistently shows high predictive accuracy across price- and volume-related stock attributes. Whether forecasting daily price movements—such as Open, Close, High, Low, VWAP, and Prev Close — or analysing market activity via Volume, Turnover, Deliverable Volume, and %Deliverable, the model demonstrates:
+      - Tight alignment with actual market trends
+      - Minimal prediction lag or volatility
+      - Strong responsiveness to fluctuating behaviour
+      - Reliability in tracking investor sentiment and liquidity
+   - This cross-dimensional consistency reinforces the robustness of the RNN approach in capturing time-series stock behaviour
+   - The model is well-suited for building intelligent forecasting systems that anticipate both market price action and transactional dynamics.
 </details>
 
 ## License
