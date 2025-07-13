@@ -7,7 +7,9 @@ A comparative study of CNN, RNN and LSTM architectures for stock‐price forecas
 - [Features](#features)
 - [Dependencies](#dependencies)  
 - [Installation](#installation)  
-- [Data Source, Modeling Pipeline and Prediction Results](#DataSource,ModelingPipelineandPredictionResults)   
+- [Data Source](#dataSource)
+- [Modeling Pipeline](#modelingpipeline)
+- [Prediction Results](#predictionresults)
 - [License](#license)  
 
 ## Project Overview
@@ -40,8 +42,8 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
    # on Windows:
    venv\Scripts\activate pip install -r requirements.txt
 
-## Data Source, Modeling Pipeline and Prediction Results
-### 1. Data Source
+## Data Source
+### Data Source
 The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NIFTY 50 index constituents, downloaded from Kaggle:
 - Source: “Nifty50 Stock Market Data” by Rohan Rao  
 - URL: https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data  
@@ -199,7 +201,8 @@ Analyse the data range, trends and the relation in each column
    - %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behaviour (Possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity)
 </details>
 
-### 3. Preprocessing
+## Modeling Pipeline
+### 1. Preprocessing
 1. Scale each column to [0,1] with MinMaxScaler
 2. Window into 60-day input sequences for supervised learning
 3. Split 80% train / 20% test<br>
@@ -207,23 +210,23 @@ Analyse the data range, trends and the relation in each column
 <details>
    <summary>Image for Preprocessing</summary>
 <img src="Image/DataManagement/DataProcessingWithMinMaxScaler.png" style="width:60%;"/><br>
-Image 3.1 - Apply MinMaxScaler<br>
+Image 1.1 - Apply MinMaxScaler<br>
 
 <img src="Image/DataManagement/FuntionForFixMinMaxScaler.png" style="width:40%;"/><br>
-Image 3.2 - Function to apply MinMaxScaler<br>
+Image 1.2 - Function to apply MinMaxScaler<br>
 
 <img src="Image/\DataManagement/DataLabeling.png" style="width:75%;"/><br>
-Image 3.3 - Data Labeling and split to 80% data for training<br>
+Image 1.3 - Data Labeling and split to 80% data for training<br>
 
 <img src="Image/DataManagement/FunctionForApplySequences.png" style="width:40%;"/><br>
-Image 3.4 - Function For creating sequences<br>
+Image 1.4 - Function For creating sequences<br>
 
 <img src="Image/DataManagement/SetupForDataPredcition.png" style="width:75%;"/><br>
-Image 3.5 - Split the Last 20% of the data for the test 
+Image 1.5 - Split the Last 20% of the data for the test 
 </details>
 
 
-### 4. Deep Learning Model Applications
+### 2. Deep Learning Model Applications
 - **CNN**: 1D conv layers + global pooling  
 - **RNN**: SimpleRNN layers  
 - **LSTM**: Stacked LSTM cells with dropout
@@ -231,13 +234,13 @@ Image 3.5 - Split the Last 20% of the data for the test
 <details> 
 <summary>Image for apply Deep Learning Models</summary>
 <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:75%;"/><br>
-Image 4.1 - Source Code about LSTM Application
+Image 2.1 - Source Code about LSTM Application
 
 <img src="Image/DataManagement/DataTraining_RNN.png" style="width:75%;"/><br>
-Image 4.2 - Source Code about RNN Application
+Image 2.2 - Source Code about RNN Application
 
 <img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
-Image 4.3 - Source Code about CNN Application<br>
+Image 2.3 - Source Code about CNN Application<br>
 
 ****Description:****
 - Historical stock data was scaled and segmented into 60-day rolling sequences
@@ -250,25 +253,27 @@ Image 4.3 - Source Code about CNN Application<br>
 - Predictions were benchmarked against actual stock prices to assess performance
 </details>
 
+## Prediction Results
+### 1. Prediction Results For LSTM
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Price Data</summary>
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:80%;"/><br>
-   Image 4.4 - LSTM Data prediction Result - Open
+   Image 1.1 - LSTM Data prediction Result - Open
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:80%;"/><br>
-   Image 4.5 - LSTM Data prediction Result - High
+   Image 1.2 - LSTM Data prediction Result - High
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:80%;"/><br>
-   Image 4.6 - LSTM Data prediction Result - Low
+   Image 1.3 - LSTM Data prediction Result - Low
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:80%;"/><br>
-   Image 4.7 - LSTM Data prediction Result - Prev Close
+   Image 1.4 - LSTM Data prediction Result - Prev Close
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:80%;"/><br>
-   Image 4.8 - LSTM Data prediction Result - Close
+   Image 1.5 - LSTM Data prediction Result - Close
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VWAP_LSTM.png" style="width:80%;"/><br>
-   Image 4.9 - LSTM Data prediction Result - VWAP
+   Image 1.6 - LSTM Data prediction Result - VWAP
    
    ****Description:****
    - This diagram compares the actual and predicted values of the stock prices using an LSTM model
@@ -285,41 +290,42 @@ Image 4.3 - Source Code about CNN Application<br>
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Volume Data</summary>
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:80%;"/><br>
-   Image 4.10 - LSTM Data prediction Result - Volume
+   Image 1.7 - LSTM Data prediction Result - Volume
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:80%;"/><br>
-   Image 4.11 - LSTM Data prediction Result - Turnover
+   Image 1.8 - LSTM Data prediction Result - Turnover
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:80%;"/><br>
-   Image 4.12 - LSTM Data prediction Result - Deliverable Volume
+   Image 1.9 - LSTM Data prediction Result - Deliverable Volume
    
    <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:80%;"/><br>
-   Image 4.13 - LSTM Data prediction Result - %Deliverable
+   Image 1.10 - LSTM Data prediction Result - %Deliverable
    
    ****Description:**** <br>
    - While the LSTM model successfully captures the underlying baseline of volume-related data, it lacks sensitivity to sudden surges or dips (This shortcoming is likely becausee is often driven by short-term catalysts, such as company news, earnings releases, or macroeconomic shocks — none of which are encoded in historical OHLCV data alone)
    - Consequently, the model’s predictions appear muted during periods of heightened activity, underscoring the need for exogenous features or alternative architectures to reflect the dynamic nature of trading volume better
 </details>
 
+### 2. Prediction Results For RNN
 <details>
    <summary>Result of stock data prediction (RNN) - Stock Price Data</summary>
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Open_RNN.png" style="width:80%;"/><br>
-   Image 4.14 - RNN Data prediction Result - Open
+   Image 2.1 - RNN Data prediction Result - Open
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_High_RNN.png" style="width:80%;"/><br>
-   Image 4.15 - RNN Data prediction Result - High
+   Image 2.2 - RNN Data prediction Result - High
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Low_RNN.png" style="width:80%;"/><br>
-   Image 4.16 - RNN Data prediction Result - Low
+   Image 2.3 - RNN Data prediction Result - Low
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PrevClose_RNN.png" style="width:80%;"/><br>
-   Image 4.17 - RNN Data prediction Result - Prev Close
+   Image 2.4 - RNN Data prediction Result - Prev Close
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Close_RNN.png" style="width:80%;"/><br>
-   Image 4.18 - RNN Data prediction Result - Close
+   Image 2.5 - RNN Data prediction Result - Close
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_VWAP_RNN.png" style="width:80%;"/><br>
-   Image 4.19 - RNN Data prediction Result - VWAP
+   Image 2.6 - RNN Data prediction Result - VWAP
    
    ****Description:****
    - The overall trend between both lines aligns closely, especially during gradual movements, demonstrating the model’s ability to capture the directional flow of the data
@@ -329,20 +335,20 @@ Image 4.3 - Source Code about CNN Application<br>
 <details>
    <summary>Result of stock data prediction (RNN) - Stock Volume Data</summary>
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Volume_RNN.png" style="width:80%;"/><br>
-   Image 4.20 - RNN Data prediction Result - Volume
+   Image 2.7 - RNN Data prediction Result - Volume
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Turnover_RNN.png" style="width:80%;"/><br>
-   Image 4.21 - RNN Data prediction Result - Turnover
+   Image 2.8 - RNN Data prediction Result - Turnover
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_DeliverableVolume_RNN.png" style="width:80%;"/><br>
-   Image 4.22 - RNN Data prediction Result - Deliverable Volume
+   Image 2.9 - RNN Data prediction Result - Deliverable Volume
    
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PercentageOfDeliverable_RNN.png" style="width:80%;"/><br>
-   Image 4.23 - RNN Data prediction Result - %Deliverable
+   Image 2.10 - RNN Data prediction Result - %Deliverable
    
    ****Description:**** <br>
    For others:
-   - While the RNN captures the broad structure of turnover trends, it underreacts to significant fluctuations, missing key surges in trading volume
+   - It underreacts to significant fluctuations, missing key surges in trading volume (While the RNN captures the broad structure of turnover trends)
    - This gap highlights a limitation of using recursive RNN predictions on high-volatility financial features — the model doesn't integrate sudden market catalysts like earnings surprises or macroeconomic shifts
    
    For %Deliverable Data:
@@ -350,25 +356,26 @@ Image 4.3 - Source Code about CNN Application<br>
    - However, significant variance exists during abrupt fluctuations — the model fails to replicate sharp spikes or sudden drops
 </details>
 
+### 3. Prediction Results For CNN
 <details>
    <summary>Result of stock data prediction (CNN) - Stock Price Data</summary>
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Open_CNN.png" style="width:80%;"/><br>
-   Image 4.24 - CNN Data prediction Result - Open
+   Image 3.1 - CNN Data prediction Result - Open
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_High_CNN.png" style="width:80%;"/><br>
-   Image 4.25 - CNN Data prediction Result - High
+   Image 3.2 - CNN Data prediction Result - High
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Low_CNN.png" style="width:80%;"/><br>
-   Image 4.16 - RNN Data prediction Result - Low
+   Image 3.3 - RNN Data prediction Result - Low
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PrevClose_CNN.png" style="width:80%;"/><br>
-   Image 4.17 - CNN Data prediction Result - Prev Close
+   Image 3.4 - CNN Data prediction Result - Prev Close
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Close_CNN.png" style="width:80%;"/><br>
-   Image 4.18 - CNN Data prediction Result - Close
+   Image 3.5 - CNN Data prediction Result - Close
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_VWAP_CNN.png" style="width:80%;"/><br>
-   Image 4.19 - CNN Data prediction Result - VWAP
+   Image 3.6 - CNN Data prediction Result - VWAP
    
    ****Description:****
    - The model successfully learns and tracks the overall price trend — particularly during steady climbs and dips
@@ -379,16 +386,16 @@ Image 4.3 - Source Code about CNN Application<br>
 <details>
    <summary>Result of stock data prediction (CNN) - Stock Volume Data</summary>
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Volume_CNN.png" style="width:80%;"/><br>
-   Image 4.20 - CNN Data prediction Result - Volume
+   Image 3.7 - CNN Data prediction Result - Volume
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Turnover_CNN.png" style="width:80%;"/><br>
-   Image 4.21 - CNN Data prediction Result - Turnover
+   Image 3.8 - CNN Data prediction Result - Turnover
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_DeliverableVolume_CNN.png" style="width:80%;"/><br>
-   Image 4.22 - CNN Data prediction Result - Deliverable Volume
+   Image 3.9 - CNN Data prediction Result - Deliverable Volume
    
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PercentageOfDeliverable_CNN.png" style="width:80%;"/><br>
-   Image 4.23 - CNN Data prediction Result - %Deliverable
+   Image 3.10 - CNN Data prediction Result - %Deliverable
    
    ****Description:****
    For others:
@@ -402,15 +409,16 @@ Image 4.3 - Source Code about CNN Application<br>
    - This highlights CNN’s limitation in forecasting noisy time series with high-frequency variation (While it detects patterns within short windows, it struggles to track abrupt deviations unless supplemented with external features)
 </details>
 
-#### 5. Forecast Data Comparison<br>
+#### 4. Forecast Data Comparison<br>
 To evaluate the performance and reliability of the predictive models, I would compared their outputs against actual observed values using the Mean Absolute Error (MAE) as the primary metric:
 - MAE provides an intuitive measure of prediction accuracy by quantifying the average deviation between estimated and true values
 - A lower MAE indicates greater precision in the model’s forecasts, making it a valuable benchmark for comparison across different approaches and datasets
 
+### Prediction Results Comparsion
 <details>
    <summary>Source Code for Data Comparsion</summary>
    <img src="/Image/DataManagement/CalculateBestModel.png" style="width:80%;"/><br>
-   Image 5.1 - Source Code for data comparison
+   Image 4.1 - Source Code for data comparison
 
    ****Description:****<br>
    To identify the most accurate prediction model across multiple architectures (e.g. CNN, RNN, LSTM), the following steps are used:
@@ -434,28 +442,27 @@ To evaluate the performance and reliability of the predictive models, I would co
    - Highlight the best-performing model for visual comparison
 </details>
 
-
 <details>
    <summary>Image for Data Comparison</summary>
    <details>
    <summary>Data Comparison (Stock Price Data)</summary>
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Open_FinalResult.png" style="width:80%;"/><br>
-   Image 5.2 - Data Comparison Result - Open
+   Image 4.2 - Data Comparison Result - Open
       
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_High_FinalResult.png" style="width:80%;"/><br>
-   Image 5.3 - Data Comparison Result - High
+   Image 4.3 - Data Comparison Result - High
       
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Low_FinalResult.png" style="width:80%;"/><br>
-   Image 5.4 - Data Comparison Result - Low
+   Image 4.4 - Data Comparison Result - Low
       
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_PrevClose_FinalResult.png" style="width:80%;"/><br>
-   Image 5.5 - Data Comparison Result - Prev Close
+   Image 4.5 - Data Comparison Result - Prev Close
       
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Close_FinalResult.png" style="width:80%;"/><br>
-   Image 5.6 - Data Comparison Result - Close
+   Image 4.6 - Data Comparison Result - Close
       
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_VWAP_FinalResult.png" style="width:80%;"/><br>
-   Image 5.7 - Data Comparison Result - VWAP<br>
+   Image 4.7 - Data Comparison Result - VWAP<br>
    
    ****Description:****<br>
    - The RNN model shows strong predictive performance across six stock price attributes: Prev Close, Open, High, Low, Close, and VWAP
@@ -471,16 +478,16 @@ To evaluate the performance and reliability of the predictive models, I would co
    <details>
    <summary>Data Comparison (Stock Volume Data)</summary>
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Volume_FinalResult.png" style="width:80%;"/><br>
-   Image 5.8 - Data Comparison Result - Volume
+   Image 4.8 - Data Comparison Result - Volume
    
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Turnover_FinalResult.png" style="width:80%;"/><br>
-   Image 5.9 - Data Comparison Result - Turnover
+   Image 4.9 - Data Comparison Result - Turnover
    
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_DeliverableVolume_FinalResult.png" style="width:80%;"/><br>
-   Image 5.10 - Data Comparison Result - Deliverable Volume
+   Image 4.10 - Data Comparison Result - Deliverable Volume
    
    <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_PercentageOfDeliverable_FinalResult.png" style="width:80%;"/><br>
-   Image 5.11 - Data Comparison Result - %Deliverable<br>
+   Image 4.11 - Data Comparison Result - %Deliverable<br>
 
    ****Description:****<br>
    - Volume – Actual vs Prediction (Best: RNN)
