@@ -53,18 +53,23 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
    - Volume indicators: Volume, Turnover, Deliverable Volume, %Deliverable
  
 - Column description<br>
-   ****Stock Price Indicators:**** <br>
-      - Open: The first traded price of the stock when the market opens for the day
-      - High: The highest price reached during the trading session
-      - Low: The lowest price traded throughout the session
-      - Last: The final price at which the stock was traded before market close
-      - Close: Official end-of-day price, often used for technical analysis
-      - VWAP: Volume Weighted Average Price – the average price adjusted for volume; reflects actualet value throughout the day
-   ****Stock Volume Indicators:**** <br>
-      - Volume: Total number of shares traded over some time
-      - Turnover: The total monetary value of shares traded (Volume × Price)
-      - Deliverable Volume: Portion of traded shares that are settled (not squared off intra-day)
-      - %Deliverable: Ratio of deliverable volume to total volume – indicates investor conviction
+  ****Stock Price Indicators:**** <br>
+  | Column Name | Description                                                                                                       |
+  | ----------- | ----------------------------------------------------------------------------------------------------------------- |
+  | Open        | The first traded price of the stock when the market opens for the day                                             |
+  | High        | The highest price reached during the trading session                                                              |
+  | Low         | The lowest price traded throughout the session                                                                    |
+  | Last        | The final price at which the stock was traded before market close                                                 |
+  | Close       | Official end-of-day price, often used for technical analysis                                                      |
+  | VWAP        | Volume Weighted Average Price – the average price adjusted for volume; reflects actualet value throughout the day |
+  
+  ****Stock Volume Indicators:**** <br>
+  | Column Name        | Description                                                                 |
+  | ------------------ | --------------------------------------------------------------------------- |
+  | Volume             | Total number of shares traded over some time                                |
+  | Turnover           | The total monetary value of shares traded (Volume × Price)                  |
+  | Deliverable Volume | Portion of traded shares that are settled (not squared off intra-day)       |
+  | %Deliverable       | Ratio of deliverable volume to total volume – indicates investor conviction |
 
 <details>
 <summary>Image for data</summary>
