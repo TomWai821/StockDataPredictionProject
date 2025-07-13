@@ -40,7 +40,7 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
    # on Windows:
    venv\Scripts\activate pip install -r requirements.txt
 
-## Data
+## Data Source, Modeling Pipeline and Prediction Results
 ### 1. Data Source
 The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NIFTY 50 index constituents, downloaded from Kaggle:
 - Source: “Nifty50 Stock Market Data” by Rohan Rao  
@@ -72,7 +72,7 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
   | %Deliverable       | Ratio of deliverable volume to total volume – indicates investor conviction |
 
 <details>
-<summary>Image for data</summary>
+<summary>Image for data filtering and description</summary>
    <img src="Image/DataManagement/DataFiltering.png" style="width:60%;"/><br>
    Image 1.1 - Filter out not useful data and set the CSV file data to a dataframe<br>
    
@@ -218,13 +218,16 @@ Image 3.4 - Function For creating sequences<br>
 
 <img src="Image/DataManagement/SetupForDataPredcition.png" style="width:60%;"/><br>
 Image 3.5 - Split the Last 20% of the data for the test 
+</details>
 
-### 4. Model Architectures and Applications
+
+### 4. Deep Learning Model Applications
 - **CNN**: 1D conv layers + global pooling  
 - **RNN**: SimpleRNN layers  
 - **LSTM**: Stacked LSTM cells with dropout
 
-#### Image for apply architectures
+<details> 
+<summary>Image for apply Deep Learning Models</summary>
 <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:75%;"/><br>
 Image 4.1 - Source Code about LSTM Application
 
@@ -232,7 +235,17 @@ Image 4.1 - Source Code about LSTM Application
 Image 4.2 - Source Code about RNN Application
 
 <img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
-Image 4.3 - Source Code about CNN Application
+Image 4.3 - Source Code about CNN Application<br>
+
+****Description:****
+- Historical stock data was scaled and segmented into 60-day rolling sequences
+- Each deep learning model (CNN, RNN, LSTM) was trained on identical input formats to ensure consistency
+- TensorFlow implementations were used:
+   - 1D convolutional layers for CNN to detect short-term price patterns
+   - Simple RNN cells to capture sequential dependencies
+   - Stacked LSTM units to learn long-term temporal features in stock movements
+- Models were evaluated using Mean Absolute Error (MAE)
+- Predictions were benchmarked against actual stock prices to assess performance
 </details>
 
 <details>
