@@ -209,19 +209,19 @@ Analyse the data range, trends and the relation in each column
 
 <details>
    <summary>Image for Preprocessing</summary>
-<img src="Image/DataManagement/DataProcessingWithMinMaxScaler.png" style="width:60%;"/><br>
+<img src="Image/DataManagement/DataProcessingWithMinMaxScaler.png" style="width:55%;"/><br>
 Image 1.1 - Apply MinMaxScaler<br>
 
 <img src="Image/DataManagement/FuntionForFixMinMaxScaler.png" style="width:40%;"/><br>
 Image 1.2 - Function to apply MinMaxScaler<br>
 
-<img src="Image/\DataManagement/DataLabeling.png" style="width:75%;"/><br>
+<img src="Image/\DataManagement/DataLabeling.png" style="width:85%;"/><br>
 Image 1.3 - Data Labeling and split to 80% data for training<br>
 
-<img src="Image/DataManagement/FunctionForApplySequences.png" style="width:40%;"/><br>
+<img src="Image/DataManagement/FunctionForApplySequences.png" style="width:35%;"/><br>
 Image 1.4 - Function For creating sequences<br>
 
-<img src="Image/DataManagement/SetupForDataPredcition.png" style="width:75%;"/><br>
+<img src="Image/DataManagement/SetupForDataPredcition.png" style="width:85%;"/><br>
 Image 1.5 - Split the Last 20% of the data for the test 
 </details>
 
