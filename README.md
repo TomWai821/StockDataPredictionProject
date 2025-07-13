@@ -7,9 +7,9 @@ A comparative study of CNN, RNN and LSTM architectures for stock‐price forecas
 - [Features](#features)
 - [Dependencies](#dependencies)  
 - [Installation](#installation)  
-- [Data Source](#dataSource)
-- [Modeling Pipeline](#modelingpipeline)
-- [Prediction Results](#predictionresults)
+- [Data Source](#data-source)
+- [Modeling Pipeline](#modeling-pipeline)
+- [Prediction Results](#prediction-results)
 - [License](#license)  
 
 ## Project Overview
