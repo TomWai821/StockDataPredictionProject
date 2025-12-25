@@ -121,7 +121,7 @@ Analyse the data range, trends and the relation in each column
 
 <details>
    <summary>Box plot (Stock Volume Data)</summary>
-   <img src="Image/Diagrams/AnalyseData/BoxPlot_TurnOver.png" style="width:50%;"/><br>
+   <img src="Image/Diagrams/AnalyseData/BoxPlot_Turnover.png" style="width:50%;"/><br>
    Image 2.7 - Box plot for Turnover column data<br>
    
    <img src="Image/Diagrams/AnalyseData/BoxPlot_Volume.png" style="width:50%;"/><br>
@@ -158,7 +158,7 @@ Analyse the data range, trends and the relation in each column
 <details>
    <summary>Time Series Chart (Stock Volume Data)</summary>
    
-   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_TurnOver.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Turnover.png" style="width:80%;"/><br>
    Image 2.17 - Time Series Chart for Turnover column data<br>
    
    <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_Volume.png" style="width:80%;"/><br>
@@ -441,7 +441,6 @@ Analyse the data range, trends and the relation in each column
    - VAR-predicted values consistently fail to track the upward trend in actual stock prices  
    - This visual discrepancy reveals the limitations of linear models in capturing dynamic market behavior  
    - It reinforces the need for deep learning approaches that can model non-linear patterns and temporal dependencies
-
 </details>
 
 <details>
@@ -467,8 +466,6 @@ Analyse the data range, trends and the relation in each column
    - Actual %Deliverable values show noticeable volatility, while VAR predictions remain smooth and muted  
    - Suggests VAR struggles to capture settlement-related fluctuations due to limited sensitivity to short-term catalysts  
    - Highlights the model’s inability to reflect dynamic shifts in delivery behavior driven by market conditions
-
-
 </details>
 
 #### 5. Evaluation Metrics:<br>
@@ -516,26 +513,28 @@ Together they form a balanced evaluation framework widely used in financial fore
    <summary>Data Comparison (Deep Learning models)</summary>
    <img src="Image/Diagrams/PrediceResult/MAE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
    Image 5.1 - Deep Learning Model Comparing (MAE)
-      
+         
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
    Image 5.2 - Deep Learning Model Comparing (RMSE)
-      
+         
    ****Conclusion:****<br>
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
    - RNN outperforming LSTM and CNN in every category
    </details>
 
+   
+   <details>
    <summary>Data Comparison (RNN vs VAR)</summary>
    <img src="Image/Diagrams/PrediceResult/MAE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
    Image 5.3 - RNN vs VAR (MAE)
-      
+         
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
    Image 5.4 - RNN vs VAR (RMSE)
-      
+         
    ****Conclusion:****<br>
    - RNN consistently delivers lower error scores
    - VAR shows much higher prediction errors (especially in price-related metrics like Close, High, and VWAP)
-   - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR.
+   - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR
    </details>
 
    ****Summary:****<br>
