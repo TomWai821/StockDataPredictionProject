@@ -532,7 +532,7 @@ Together they form a balanced evaluation framework widely used in financial fore
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
    Image 5.2 - Deep Learning Model Comparing (RMSE)
          
-   ****Conclusion:****<br>
+   ****Description:****<br>
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
    - RNN outperforming LSTM and CNN in every category
    </details>
