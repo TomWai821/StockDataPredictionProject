@@ -10,6 +10,7 @@ A comparative study of CNN, RNN and LSTM architectures for stock‐price forecas
 - [Data Source](#data-source)
 - [Modeling Pipeline](#modeling-pipeline)
 - [Prediction Results](#prediction-results)
+- [Evaluation Metrics](#evaluation-metrics)
 - [License](#license)  
 
 ## Project Overview
@@ -468,11 +469,9 @@ Analyse the data range, trends and the relation in each column
    - Highlights the model’s inability to reflect dynamic shifts in delivery behavior driven by market conditions
 </details>
 
-#### 5. Evaluation Metrics:<br>
+### Prediction Results Comparsion
 Forecast accuracy was assessed using MAE (average error) and RMSE (penalises large deviations)<br>
 Together they form a balanced evaluation framework widely used in financial forecasting
-
-### Prediction Results Comparsion
 <details>
    <summary>Source Code for Data Comparsion</summary>
    <img src="/Image/DataManagement/FunctionForCalculateScoreAndDisplayData.png" style="width:80%;"/><br>
