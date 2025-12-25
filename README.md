@@ -537,7 +537,8 @@ Together they form a balanced evaluation framework widely used in financial fore
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
    - RNN outperforming LSTM and CNN in every category
 </details>
-   
+
+
 <details>
    <summary>Data Comparison (RNN vs VAR)</summary>
    <img src="Image/Diagrams/PredictResult/MAE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
@@ -552,28 +553,30 @@ Together they form a balanced evaluation framework widely used in financial fore
    - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR
 </details>
 
-<defails>
+
+<details>
    <summary>Conclusion</summary>
       
-   - RNN is the most suitable model for financial time series forecasting
-   - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships
-        
-   - Consistently outperforms VAR, LSTM, and CNN in both MAE and RMSE evaluations
-      - VAR vs RNN
-         - VAR relies on linear assumptions and struggles with volatility
-         - RNN adapts better to non-stationary financial data
+   - RNN is the most suitable model for financial time series forecasting  
+   - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships  
 
-      - LSTM vs RNN
-        - LSTM captures long-term dependencies but is more complex
-        - RNN achieves similar sequence modelling with lower complexity, making it more efficient for this dataset
-      
-      - CNN vs RNN
-        - CNN focuses on local patterns
-        - RNN better handles long-term dependencies across multiple financial metrics
-          
-   - Overall, RNN demonstrates the strongest balance of accuracy, stability, and adaptability across all tested models
-   - Highlights RNN as the most reliable choice for financial forecasting tasks(Time-series based)
+   - Consistently outperforms VAR, LSTM, and CNN in both MAE and RMSE evaluations  
+      - VAR vs RNN  
+         - VAR relies on linear assumptions and struggles with volatility  
+         - RNN adapts better to non-stationary financial data  
+
+      - LSTM vs RNN  
+        - LSTM captures long-term dependencies but is more complex  
+        - RNN achieves similar sequence modelling with lower complexity, making it more efficient for this dataset  
+
+      - CNN vs RNN  
+        - CNN focuses on local patterns  
+        - RNN better handles long-term dependencies across multiple financial metrics  
+
+   - Overall, RNN demonstrates the strongest balance of accuracy, stability, and adaptability across all tested models  
+   - Highlights RNN as the most reliable choice for financial forecasting tasks (time-series based)  
 </details>
+
 
 ## License
 MIT License
