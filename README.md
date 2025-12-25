@@ -279,22 +279,22 @@ Analyse the data range, trends and the relation in each column
 ### 1. Prediction Results For LSTM
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Price Data</summary>
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_Open_LSTM.png" style="width:80%;"/><br>
    Image 1.1 - LSTM Data prediction Result - Open
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_High_LSTM.png" style="width:80%;"/><br>
    Image 1.2 - LSTM Data prediction Result - High
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_Low_LSTM.png" style="width:80%;"/><br>
    Image 1.3 - LSTM Data prediction Result - Low
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_PrevClose_LSTM.png" style="width:80%;"/><br>
    Image 1.4 - LSTM Data prediction Result - Prev Close
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_Close_LSTM.png" style="width:80%;"/><br>
    Image 1.5 - LSTM Data prediction Result - Close
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_VWAP_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_VWAP_LSTM.png" style="width:80%;"/><br>
    Image 1.6 - LSTM Data prediction Result - VWAP
    
    ****Description:****
@@ -306,16 +306,16 @@ Analyse the data range, trends and the relation in each column
    
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Volume Data</summary>
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_Volume_LSTM.png" style="width:80%;"/><br>
    Image 1.7 - LSTM Data prediction Result - Volume
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_Turnover_LSTM.png" style="width:80%;"/><br>
    Image 1.8 - LSTM Data prediction Result - Turnover
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_DeliverableVolume_LSTM.png" style="width:80%;"/><br>
    Image 1.9 - LSTM Data prediction Result - Deliverable Volume
    
-   <img src="Image/Diagrams/PrediceResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/LSTM/TimeSeriesChart_PercentageOfDeliverable_LSTM.png" style="width:80%;"/><br>
    Image 1.10 - LSTM Data prediction Result - %Deliverable
    
    ****Description:**** <br>
@@ -328,22 +328,22 @@ Analyse the data range, trends and the relation in each column
 ### 2. Prediction Results For RNN
 <details>
    <summary>Result of stock data prediction (RNN) - Stock Price Data</summary>
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Open_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_Open_RNN.png" style="width:80%;"/><br>
    Image 2.1 - RNN Data prediction Result - Open
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_High_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_High_RNN.png" style="width:80%;"/><br>
    Image 2.2 - RNN Data prediction Result - High
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Low_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_Low_RNN.png" style="width:80%;"/><br>
    Image 2.3 - RNN Data prediction Result - Low
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PrevClose_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_PrevClose_RNN.png" style="width:80%;"/><br>
    Image 2.4 - RNN Data prediction Result - Prev Close
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Close_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_Close_RNN.png" style="width:80%;"/><br>
    Image 2.5 - RNN Data prediction Result - Close
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_VWAP_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_VWAP_RNN.png" style="width:80%;"/><br>
    Image 2.6 - RNN Data prediction Result - VWAP
    
    ****Description:****
@@ -354,16 +354,16 @@ Analyse the data range, trends and the relation in each column
 
 <details>
    <summary>Result of stock data prediction (RNN) - Stock Volume Data</summary>
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Volume_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_Volume_RNN.png" style="width:80%;"/><br>
    Image 2.7 - RNN Data prediction Result - Volume
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Turnover_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_Turnover_RNN.png" style="width:80%;"/><br>
    Image 2.8 - RNN Data prediction Result - Turnover
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_DeliverableVolume_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_DeliverableVolume_RNN.png" style="width:80%;"/><br>
    Image 2.9 - RNN Data prediction Result - Deliverable Volume
    
-   <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_PercentageOfDeliverable_RNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RNN/TimeSeriesChart_PercentageOfDeliverable_RNN.png" style="width:80%;"/><br>
    Image 2.10 - RNN Data prediction Result - %Deliverable
    
    ****Description:**** <br>
@@ -379,22 +379,22 @@ Analyse the data range, trends and the relation in each column
 ### 3. Prediction Results For CNN
 <details>
    <summary>Result of stock data prediction (CNN) - Stock Price Data</summary>
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Open_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_Open_CNN.png" style="width:80%;"/><br>
    Image 3.1 - CNN Data prediction Result - Open
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_High_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_High_CNN.png" style="width:80%;"/><br>
    Image 3.2 - CNN Data prediction Result - High
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Low_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_Low_CNN.png" style="width:80%;"/><br>
    Image 3.3 - RNN Data prediction Result - Low
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PrevClose_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_PrevClose_CNN.png" style="width:80%;"/><br>
    Image 3.4 - CNN Data prediction Result - Prev Close
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Close_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_Close_CNN.png" style="width:80%;"/><br>
    Image 3.5 - CNN Data prediction Result - Close
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_VWAP_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_VWAP_CNN.png" style="width:80%;"/><br>
    Image 3.6 - CNN Data prediction Result - VWAP
    
    ****Description:****
@@ -406,16 +406,16 @@ Analyse the data range, trends and the relation in each column
 
 <details>
    <summary>Result of stock data prediction (CNN) - Stock Volume Data</summary>
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Volume_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_Volume_CNN.png" style="width:80%;"/><br>
    Image 3.7 - CNN Data prediction Result - Volume
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Turnover_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_Turnover_CNN.png" style="width:80%;"/><br>
    Image 3.8 - CNN Data prediction Result - Turnover
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_DeliverableVolume_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_DeliverableVolume_CNN.png" style="width:80%;"/><br>
    Image 3.9 - CNN Data prediction Result - Deliverable Volume
    
-   <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_PercentageOfDeliverable_CNN.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/CNN/TimeSeriesChart_PercentageOfDeliverable_CNN.png" style="width:80%;"/><br>
    Image 3.10 - CNN Data prediction Result - %Deliverable
    
    ****Description:****
@@ -434,22 +434,22 @@ Analyse the data range, trends and the relation in each column
 ### 4. Prediction Results For VAR
 <details>
    <summary>Result of stock data prediction (VAR) - Stock Price Data</summary>
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Open_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_Open_VAR.png" style="width:80%;"/><br>
    Image 4.1 - VAR Data prediction Result - Open
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_High_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_High_VAR.png" style="width:80%;"/><br>
    Image 4.2 - VAR Data prediction Result - High
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Low_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_Low_VAR.png" style="width:80%;"/><br>
    Image 4.3 - VAR Data prediction Result - Low
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_PrevClose_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_PrevClose_VAR.png" style="width:80%;"/><br>
    Image 4.4 - VAR Data prediction Result - Prev Close
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Close_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_Close_VAR.png" style="width:80%;"/><br>
    Image 4.5 - VAR Data prediction Result - Close
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_VWAP_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_VWAP_VAR.png" style="width:80%;"/><br>
    Image 4.6 - VAR Data prediction Result - VWAP
    
    ****Description:****
@@ -461,16 +461,16 @@ Analyse the data range, trends and the relation in each column
 
 <details>
    <summary>Result of stock data prediction (VAR) - Stock Volume Data</summary>
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Volume_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_Volume_VAR.png" style="width:80%;"/><br>
    Image 4.7 - VAR Data prediction Result - Volume
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Turnover_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_Turnover_VAR.png" style="width:80%;"/><br>
    Image 4.8 - VAR Data prediction Result - Turnover
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_DeliverableVolume_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_DeliverableVolume_VAR.png" style="width:80%;"/><br>
    Image 4.9 - VAR Data prediction Result - Deliverable Volume
    
-   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_PercentageOfDeliverable_VAR.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/VAR/TimeSeriesChart_PercentageOfDeliverable_VAR.png" style="width:80%;"/><br>
    Image 4.10 - VAR Data prediction Result - %Deliverable
    
    ****Description:****
@@ -527,24 +527,24 @@ Together they form a balanced evaluation framework widely used in financial fore
 ### 2. Image for Data Comparison
 <details>
    <summary>Data Comparison (Deep Learning models)</summary>
-   <img src="Image/Diagrams/PrediceResult/MAE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/MAE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
    Image 2.1 - Deep Learning Model Comparing (MAE)
          
-   <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
+   <img src="Image/Diagrams/PredictResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
    Image 2.2 - Deep Learning Model Comparing (RMSE)
          
    ****Description:****<br>
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
    - RNN outperforming LSTM and CNN in every category
-   </details>
+</details>
    
-   <details>
+<details>
    <summary>Data Comparison (RNN vs VAR)</summary>
-   <img src="Image/Diagrams/PrediceResult/MAE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
-   Image 1.3 - RNN vs VAR (MAE)
+   <img src="Image/Diagrams/PredictResult/MAE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
+   Image 2.3 - RNN vs VAR (MAE)
          
-   <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
-   Image 1.4 - RNN vs VAR (RMSE)
+   <img src="Image/Diagrams/PredictResult/RMSE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
+   Image 2.4 - RNN vs VAR (RMSE)
          
    ****Description:****<br>
    - RNN consistently delivers lower error scores
