@@ -538,7 +538,7 @@ Together they form a balanced evaluation framework widely used in financial fore
    <details>
    <summary>Conclusion</summary>
    - RNN is the most suitable model for financial time series forecasting
-      - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships
+   - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships
         
    - Consistently outperforms VAR, LSTM, and CNN in both MAE and RMSE evaluations
       - VAR vs RNN
@@ -555,7 +555,7 @@ Together they form a balanced evaluation framework widely used in financial fore
           
    - Overall, RNN demonstrates the strongest balance of accuracy, stability, and adaptability across all tested models
    - Highlights RNN as the most reliable choice for financial forecasting tasks(Time-series based)
-   <details>
+   </details>
 </details>
 
 ## License
