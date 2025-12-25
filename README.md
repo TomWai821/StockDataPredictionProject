@@ -1,8 +1,7 @@
 # Stock Data Prediction Project
-A comparative study of CNN, RNN and LSTM architectures for stock‐price forecasting using TensorFlow.
+A comparative study of traditional statistical models (VAR) and deep learning architectures (CNN, RNN, LSTM) for stock price forecasting, highlighting their differences in handling financial time-series data
 
 ## Table of Contents
-
 - [Project Overview](#project-overview)  
 - [Features](#features)
 - [Dependencies](#dependencies)  
