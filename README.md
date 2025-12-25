@@ -246,16 +246,16 @@ Analyse the data range, trends and the relation in each column
 
 <details> 
    <summary>Image for apply Deep Learning Models</summary>
-   <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:75%;"/><br>
+   <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:85%;"/><br>
    Image 2.1 - Source Code about LSTM Application
    
-   <img src="Image/DataManagement/DataTraining_RNN.png" style="width:75%;"/><br>
+   <img src="Image/DataManagement/DataTraining_RNN.png" style="width:85%;"/><br>
    Image 2.2 - Source Code about RNN Application
    
-   <img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
+   <img src="Image/DataManagement/DataTraining_CNN.png" style="width:85%;"/><br>
    Image 2.3 - Source Code about CNN Application<br>
    
-   <img src="Image/DataManagement/DataTraining_VAR.png" style="width:75%;"/><br>
+   <img src="Image/DataManagement/DataTraining_VAR.png" style="width:85%;"/><br>
    Image 2.4 - Source Code about VAR Application<br>
    
    ****Description:****
@@ -527,10 +527,10 @@ Together they form a balanced evaluation framework widely used in financial fore
    <details>
    <summary>Data Comparison (Deep Learning models)</summary>
    <img src="Image/Diagrams/PrediceResult/MAE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
-   Image 5.1 - Deep Learning Model Comparing (MAE)
+   Image 1.1 - Deep Learning Model Comparing (MAE)
          
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
-   Image 5.2 - Deep Learning Model Comparing (RMSE)
+   Image 1.2 - Deep Learning Model Comparing (RMSE)
          
    ****Description:****<br>
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
@@ -540,10 +540,10 @@ Together they form a balanced evaluation framework widely used in financial fore
    <details>
    <summary>Data Comparison (RNN vs VAR)</summary>
    <img src="Image/Diagrams/PrediceResult/MAE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
-   Image 5.3 - RNN vs VAR (MAE)
+   Image 1.3 - RNN vs VAR (MAE)
          
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
-   Image 5.4 - RNN vs VAR (RMSE)
+   Image 1.4 - RNN vs VAR (RMSE)
          
    ****Description:****<br>
    - RNN consistently delivers lower error scores
