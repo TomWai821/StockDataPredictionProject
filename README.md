@@ -545,7 +545,7 @@ Together they form a balanced evaluation framework widely used in financial fore
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
    Image 5.4 - RNN vs VAR (RMSE)
          
-   ****Conclusion:****<br>
+   ****Description:****<br>
    - RNN consistently delivers lower error scores
    - VAR shows much higher prediction errors (especially in price-related metrics like Close, High, and VWAP)
    - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR
