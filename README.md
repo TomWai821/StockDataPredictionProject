@@ -488,10 +488,12 @@ Analyse the data range, trends and the relation in each column
 ## Evaluation Metrics
 Forecast accuracy was assessed using MAE (average error) and RMSE (penalises large deviations)<br>
 Together they form a balanced evaluation framework widely used in financial forecasting
+
+### 1. Model Evaluation & Error Calculation Code
 <details>
-   <summary>Source Code for Data Comparsion</summary>
+   <summary>Source Code for Data Comparison</summary>
    <img src="/Image/DataManagement/FunctionForCalculateScoreAndDisplayData.png" style="width:80%;"/><br>
-   Image 5.1 - Source Code for data comparison
+   Image 1.1 - Functions for calculating and displaying error scores
 
    ****Description:****<br>
    To identify the most accurate prediction model across multiple architectures (e.g. CNN, RNN, LSTM), the following steps are used:
@@ -522,15 +524,14 @@ Together they form a balanced evaluation framework widely used in financial fore
 </details>
 
 
+### 2. Image for Data Comparison
 <details>
-   <summary>Image for Data Comparison</summary>
-   <details>
    <summary>Data Comparison (Deep Learning models)</summary>
    <img src="Image/Diagrams/PrediceResult/MAE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
-   Image 1.1 - Deep Learning Model Comparing (MAE)
+   Image 2.1 - Deep Learning Model Comparing (MAE)
          
    <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
-   Image 1.2 - Deep Learning Model Comparing (RMSE)
+   Image 2.2 - Deep Learning Model Comparing (RMSE)
          
    ****Description:****<br>
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
@@ -549,10 +550,9 @@ Together they form a balanced evaluation framework widely used in financial fore
    - RNN consistently delivers lower error scores
    - VAR shows much higher prediction errors (especially in price-related metrics like Close, High, and VWAP)
    - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR
-   </details>
+</details>
 
-
-   <details>
+<defails>
    <summary>Conclusion</summary>
       
    - RNN is the most suitable model for financial time series forecasting
@@ -573,7 +573,6 @@ Together they form a balanced evaluation framework widely used in financial fore
           
    - Overall, RNN demonstrates the strongest balance of accuracy, stability, and adaptability across all tested models
    - Highlights RNN as the most reliable choice for financial forecasting tasks(Time-series based)
-   </details>
 </details>
 
 ## License
