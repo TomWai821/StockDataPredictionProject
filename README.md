@@ -469,7 +469,7 @@ Analyse the data range, trends and the relation in each column
    - Highlights the model’s inability to reflect dynamic shifts in delivery behavior driven by market conditions
 </details>
 
-### Prediction Results Comparsion
+## Evaluation Metrics
 Forecast accuracy was assessed using MAE (average error) and RMSE (penalises large deviations)<br>
 Together they form a balanced evaluation framework widely used in financial forecasting
 <details>
@@ -503,7 +503,6 @@ Together they form a balanced evaluation framework widely used in financial fore
    - Plot time series data for the actual values and each model’s predictions  
    - Highlight the best-performing model for visual comparison  
    - In code: `display_min_score(...)` returns a styled DataFrame for easy inspection
-
 </details>
 
 <details>
@@ -536,7 +535,8 @@ Together they form a balanced evaluation framework widely used in financial fore
    - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR
    </details>
 
-   ****Summary:****<br>
+   <details>
+   <summary>Conclusion</summary>
    - RNN is the most suitable model for financial time series forecasting
       - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships
         
@@ -555,6 +555,7 @@ Together they form a balanced evaluation framework widely used in financial fore
           
    - Overall, RNN demonstrates the strongest balance of accuracy, stability, and adaptability across all tested models
    - Highlights RNN as the most reliable choice for financial forecasting tasks(Time-series based)
+   <details>
 </details>
 
 ## License
