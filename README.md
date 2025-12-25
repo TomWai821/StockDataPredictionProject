@@ -13,7 +13,7 @@ A comparative study of CNN, RNN and LSTM architectures for stock‐price forecas
 - [License](#license)  
 
 ## Project Overview
-This project benchmarks three deep‐learning approaches—1D Convolutional Neural Networks (CNNs), vanilla Recurrent Neural Networks (RNNs) and Long Short-Term Memory networks (LSTMs)—on historical stock‐price data. The goal is to identify which model achieves the best trade-off between forecasting accuracy and training/inference efficiency.
+This project benchmarks three deep‐learning approaches—1D Convolutional Neural Networks (CNNs), vanilla Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs) and Vector Auto Regression(VAR) — on historical stock‐price data. The goal is to identify which model achieves the best trade-off between forecasting accuracy and training/inference efficiency.
 
 ## Features
 - Data ingestion & preprocessing pipeline  
@@ -22,12 +22,14 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
 - Visualization of loss curves and predicted vs actual prices
 
 ## Dependencies
-- TensorFlow (Builds and trains deep learning models)
-- NumPy (Handles numerical operations and array structures)
-- Pandas (Manages datasets, DataFrames, and preprocessing)
-- Matplotlib (Generates visualizations)
-- Seaborn (Matplotlib library, it adds styling and context-aware enhancements to plots)
-- scikit-learn (Supports data scaling and train-test splitting)
+- NumPy - Numerical operations and array structures
+- Pandas - Dataset management and preprocessing  
+- Matplotlib - visualisations
+- Seaborn - Matplotlib library, enhanced plotting styles
+- scikit-learn - Data scaling and train-test splitting
+- TensorFlow - Deep learning model implementation)  
+- statsmodels - Vector AutoRegression (VAR) baseline model
+
 
 ## Installation
 1. Clone this repo
@@ -94,7 +96,6 @@ Analyse the data range, trends and the relation in each column
    - Box Plot (View the range of data)
    - Time Series Map (View the trends of data)
    - Heatmap and pair plot (View the data relation)
-
   
 #### Image for Data Analyst
 <details>
@@ -181,12 +182,11 @@ Analyse the data range, trends and the relation in each column
    
    **Description:**<br>
    ***Image 2.21:***
-   - The pair plot reveals that many variable combinations produce scatter plots with similar shapes and distribution patterns. This visual consistency suggests potential inter-variable relationships, indicating that these features may be correlated or share underlying dependencies
+   - Pair plot shows consistent scatter patterns across variables, suggesting potential correlations
      
    ***Image 2.22***
-   - This pair plot highlights that Volume, Turnover, and Deliverable Volume exhibit comparable distribution shapes and scatter patterns, implying a strong positive correlation (Since these features all reflect different aspects of market trading activity, their relational nature is expected)
-   - %Deliverable — representing the percentage of traded shares settled and delivered to buyers — shows inconsistent or weaker associations with the other variables
-   - This suggests it captures a distinct dimension of market behaviour, more closely related to settlement mechanisms than trading intensity
+   - Volume, Turnover, and Deliverable Volume are strongly correlated, reflecting trading activity
+   - %Deliverable shows weaker associations, capturing a distinct settlement-related dimension
 </details>
 
 <details>
@@ -195,10 +195,10 @@ Analyse the data range, trends and the relation in each column
    Image 2.23 - HeatMap for the whole data<br>
    
    **Description:**
-   - This heatmap reinforces the relationships previously observed in the pair plot. The stock price variables (including Open, High, Low, Last, Close, and VWAP — exhibit strong positive correlations with each other, confirming they move in sync and reflect similar market behaviour)
-   - Volume and Turnover, show a high correlation (0.91), indicating that trading volume directly drives overall transaction value. Additionally
-   - Deliverable Volume presents moderate correlations with both Volume (0.43) and Turnover (0.28), supporting its connection to trading intensity
-   - %Deliverable displays weak or negligible correlations with other volume-related variables, suggesting it captures a distinct aspect of market behaviour (Possibly linked to settlement preferences or stock delivery mechanisms rather than raw trading activity)
+   - Heatmap confirms strong correlations among stock price variables (Open, High, Low, Last, Close, VWAP)  
+   - Volume and Turnover are highly correlated (0.91), showing trading volume drives transaction value  
+   - Deliverable Volume shows moderate links to Volume (0.43) and Turnover (0.28)  
+   - %Deliverable has weak correlations, reflecting a distinct settlement-related dimension
 </details>
 
 ## Modeling Pipeline
@@ -209,48 +209,60 @@ Analyse the data range, trends and the relation in each column
 
 <details>
    <summary>Image for Preprocessing</summary>
-<img src="Image/DataManagement/DataProcessingWithMinMaxScaler.png" style="width:55%;"/><br>
-Image 1.1 - Apply MinMaxScaler<br>
-
-<img src="Image/DataManagement/FuntionForFixMinMaxScaler.png" style="width:40%;"/><br>
-Image 1.2 - Function to apply MinMaxScaler<br>
-
-<img src="Image/\DataManagement/DataLabeling.png" style="width:85%;"/><br>
-Image 1.3 - Data Labeling and split to 80% data for training<br>
-
-<img src="Image/DataManagement/FunctionForApplySequences.png" style="width:35%;"/><br>
-Image 1.4 - Function For creating sequences<br>
-
-<img src="Image/DataManagement/SetupForDataPredcition.png" style="width:85%;"/><br>
-Image 1.5 - Split the Last 20% of the data for the test 
+   <img src="Image/DataManagement/DataProcessingWithMinMaxScaler.png" style="width:55%;"/><br>
+   Image 1.1 - Apply MinMaxScaler<br>
+   
+   <img src="Image/DataManagement/FuntionForFixMinMaxScaler.png" style="width:40%;"/><br>
+   Image 1.2 - Function to apply MinMaxScaler<br>
+   
+   <img src="Image/\DataManagement/DataLabeling.png" style="width:85%;"/><br>
+   Image 1.3 - Data Labeling and split to 80% data for training<br>
+   
+   <img src="Image/DataManagement/FunctionForApplySequences.png" style="width:35%;"/><br>
+   Image 1.4 - Function For creating sequences<br>
+   
+   <img src="Image/DataManagement/SetupForDataPredcition.png" style="width:85%;"/><br>
+   Image 1.5 - Split the Last 20% of the data for the test 
 </details>
 
 
-### 2. Deep Learning Model Applications
+### 2. Models Applications
 - **CNN**: 1D conv layers + global pooling  
-- **RNN**: SimpleRNN layers  
+- **RNN**: SimpleRNN layers
 - **LSTM**: Stacked LSTM cells with dropout
+- **VAR**: Vector AutoRegression model
+
+**Remarks:**
+- VAR is a classical statistical approach that uses multiple lagged variables to capture linear interdependencies among time series
 
 <details> 
-<summary>Image for apply Deep Learning Models</summary>
-<img src="Image/DataManagement/DataTraining_LSTM.png" style="width:75%;"/><br>
-Image 2.1 - Source Code about LSTM Application
-
-<img src="Image/DataManagement/DataTraining_RNN.png" style="width:75%;"/><br>
-Image 2.2 - Source Code about RNN Application
-
-<img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
-Image 2.3 - Source Code about CNN Application<br>
-
-****Description:****
-- Historical stock data was scaled and segmented into 60-day rolling sequences
-- Each deep learning model (CNN, RNN, LSTM) was trained on identical input formats to ensure consistency
-- TensorFlow implementations were used:
-   - 1D convolutional layers for CNN to detect short-term price patterns
-   - Simple RNN cells to capture sequential dependencies
-   - Stacked LSTM units to learn long-term temporal features in stock movements
-- Models were evaluated using Mean Absolute Error (MAE)
-- Predictions were benchmarked against actual stock prices to assess performance
+   <summary>Image for apply Deep Learning Models</summary>
+   <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:75%;"/><br>
+   Image 2.1 - Source Code about LSTM Application
+   
+   <img src="Image/DataManagement/DataTraining_RNN.png" style="width:75%;"/><br>
+   Image 2.2 - Source Code about RNN Application
+   
+   <img src="Image/DataManagement/DataTraining_CNN.png" style="width:75%;"/><br>
+   Image 2.3 - Source Code about CNN Application<br>
+   
+   <img src="Image/DataManagement/DataTraining_VAR.png" style="width:75%;"/><br>
+   Image 2.4 - Source Code about VAR Application<br>
+   
+   ****Description:****
+   - Historical stock data was scaled and segmented into 60-day rolling sequences
+   - Each deep learning model (CNN, RNN, LSTM) was trained on identical input formats to ensure consistency
+   - TensorFlow implementations were used:
+      - 1D convolutional layers for CNN to detect short-term price patterns
+      - Simple RNN cells to capture sequential dependencies
+      - Stacked LSTM units to learn long-term temporal features in stock movements
+        
+   - VAR (Vector AutoRegression) was implemented as a statistical baseline
+      - Applied differencing and scaling to model linear interdependencies
+      - Forecasts based on lagged inputs were compared against actual stock prices
+        
+   **Conclusion:**
+   - This setup provides a fair comparison between classical statistical methods and deep learning approaches for financial forecasting
 </details>
 
 ## Prediction Results
@@ -276,16 +288,11 @@ Image 2.3 - Source Code about CNN Application<br>
    Image 1.6 - LSTM Data prediction Result - VWAP
    
    ****Description:****
-   - This diagram compares the actual and predicted values of the stock prices using an LSTM model
-   - The blue line represents actual prices, while the orange dashed line shows the model's predictions
-   - The chart shows that the predicted line mirrors the general trend of the actual prices — rising and falling in roughly the same places (which suggests the model effectively learns directional movement)
-   - However, there's visible divergence in timing and amplitude:
-      - The model sometimes lags behind sudden shifts
-      - The predicted line doesn’t fully replicate sharp peaks and drops in the actual values
-   - This mismatch could be due to a few factors:
-      - LSTM’s memory limitations in capturing sudden volatility
-      - Lack of external features (like macroeconomic signals or news sentiment) to explain abrupt changes (Or just the inherent unpredictability of stock prices that can't be learned from past prices alone)
-   </details>
+   - LSTM predictions mirror the overall trend, rising and falling with actual prices  
+   - Divergence appears in timing and amplitude, missing sharp peaks or sudden drops  
+   - Limitations stem from memory constraints and lack of external signals for abrupt market shifts
+
+</details>
    
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Volume Data</summary>
@@ -302,8 +309,9 @@ Image 2.3 - Source Code about CNN Application<br>
    Image 1.10 - LSTM Data prediction Result - %Deliverable
    
    ****Description:**** <br>
-   - While the LSTM model successfully captures the underlying baseline of volume-related data, it lacks sensitivity to sudden surges or dips (This shortcoming is likely becausee is often driven by short-term catalysts, such as company news, earnings releases, or macroeconomic shocks — none of which are encoded in historical OHLCV data alone)
-   - Consequently, the model’s predictions appear muted during periods of heightened activity, underscoring the need for exogenous features or alternative architectures to reflect the dynamic nature of trading volume better
+   - LSTM captures the baseline of volume-related data  
+   - Underreacts to sudden surges or dips, producing muted predictions during high activity  
+   - Limited by reliance on historical OHLCV data, lacking external catalysts like news or macro signals
 </details>
 
 ### 2. Prediction Results For RNN
@@ -328,8 +336,8 @@ Image 2.3 - Source Code about CNN Application<br>
    Image 2.6 - RNN Data prediction Result - VWAP
    
    ****Description:****
-   - The overall trend between both lines aligns closely, especially during gradual movements, demonstrating the model’s ability to capture the directional flow of the data
-   - However, minor mismatches appear during sharp spikes or dips — a reflection of the model forecasting based only on historical values, without external signals
+   - Model captures overall directional trends during gradual movements  
+   - Misses sharp spikes or dips, reflecting reliance on historical values without external signals
 </details>
 
 <details>
@@ -348,12 +356,11 @@ Image 2.3 - Source Code about CNN Application<br>
    
    ****Description:**** <br>
    For others:
-   - It underreacts to significant fluctuations, missing key surges in trading volume (While the RNN captures the broad structure of turnover trends)
-   - This gap highlights a limitation of using recursive RNN predictions on high-volatility financial features — the model doesn't integrate sudden market catalysts like earnings surprises or macroeconomic shifts
+   - Captures broad turnover and %Deliverable trends, staying close to average movement  
+   - Underreacts to sharp fluctuations, missing spikes or sudden drops 
    
    For %Deliverable Data:
-   - The prediction curve stays relatively close to the average trend of the actual data, showing that the model captures broad directional movement
-   - However, significant variance exists during abrupt fluctuations — the model fails to replicate sharp spikes or sudden drops
+   - Limited in handling high-volatility features, as it doesn’t integrate sudden market catalysts
 </details>
 
 ### 3. Prediction Results For CNN
@@ -378,9 +385,9 @@ Image 2.3 - Source Code about CNN Application<br>
    Image 3.6 - CNN Data prediction Result - VWAP
    
    ****Description:****
-   - The model successfully learns and tracks the overall price trend — particularly during steady climbs and dips
-   - However, it occasionally lags behind major price shifts (Failing to fully capture the amplitude of sharp market movements)
-   - This pattern reveals CNN’s strength in recognizing patterns from local data windows (But also its limits in modeling long-term temporal dependencies — a known constraint when predicting volatile time series like stock prices)
+   - CNN tracks overall price trends during steady climbs and dips  
+   - Lags behind sharp market movements, missing full amplitude  
+   - Strong at local pattern recognition but limited in long-term temporal modeling for volatile series
 </details>
 
 <details>
@@ -399,125 +406,157 @@ Image 2.3 - Source Code about CNN Application<br>
    
    ****Description:****
    For others:
-   - The CNN model maintains a mostly flat prediction line (It significantly underestimating the actual turnover dynamics)
-   - Meanwhile, the real data shows prominent spikes and shifts—especially around early 2021 — indicating periods of intense trading activity that the model fails to reflect
-   - This visual highlights CNN’s difficulty with capturing large-scale fluctuations in turnover (Due to its limited temporal awareness and lack of external contextual features like earnings events, investor sentiment, or economic indicators)
+   - CNN predictions remain mostly flat, underestimating turnover dynamics  
+   - Actual data shows sharp spikes (e.g., early 2021) that CNN fails to capture  
+   - Also highlights CNN’s limitation in modeling large-scale fluctuations due to weak temporal/context awareness
    
-   For %Deliverable:
-   - The CNN model captures the general baseline trend, aligning with the average level of deliverability during stable periods.
-   - However, it underperforms during volatile changes (Especially failing to reproduce sharp spikes or rapid drops in real data)
-   - This highlights CNN’s limitation in forecasting noisy time series with high-frequency variation (While it detects patterns within short windows, it struggles to track abrupt deviations unless supplemented with external features)
+  For %Deliverable:
+   - CNN captures the baseline trend during stable periods
+   - Underperforms in volatile phases, missing sharp spikes or drops  
+   - Limited in handling noisy, high-frequency variation due to weak temporal/context awareness
 </details>
 
-#### 4. Forecast Data Comparison<br>
-To evaluate the performance and reliability of the predictive models, I would compared their outputs against actual observed values using the Mean Absolute Error (MAE) as the primary metric:
-- MAE provides an intuitive measure of prediction accuracy by quantifying the average deviation between estimated and true values
-- A lower MAE indicates greater precision in the model’s forecasts, making it a valuable benchmark for comparison across different approaches and datasets
+### 4. Prediction Results For VAR
+<details>
+   <summary>Result of stock data prediction (VAR) - Stock Price Data</summary>
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Open_VAR.png" style="width:80%;"/><br>
+   Image 4.1 - VAR Data prediction Result - Open
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_High_VAR.png" style="width:80%;"/><br>
+   Image 4.2 - VAR Data prediction Result - High
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Low_VAR.png" style="width:80%;"/><br>
+   Image 4.3 - VAR Data prediction Result - Low
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_PrevClose_VAR.png" style="width:80%;"/><br>
+   Image 4.4 - VAR Data prediction Result - Prev Close
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Close_VAR.png" style="width:80%;"/><br>
+   Image 4.5 - VAR Data prediction Result - Close
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_VWAP_VAR.png" style="width:80%;"/><br>
+   Image 4.6 - VAR Data prediction Result - VWAP
+   
+   ****Description:****
+   - VAR-predicted values consistently fail to track the upward trend in actual stock prices  
+   - This visual discrepancy reveals the limitations of linear models in capturing dynamic market behavior  
+   - It reinforces the need for deep learning approaches that can model non-linear patterns and temporal dependencies
+
+</details>
+
+<details>
+   <summary>Result of stock data prediction (VAR) - Stock Volume Data</summary>
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Volume_VAR.png" style="width:80%;"/><br>
+   Image 4.7 - VAR Data prediction Result - Volume
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Turnover_VAR.png" style="width:80%;"/><br>
+   Image 4.8 - VAR Data prediction Result - Turnover
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_DeliverableVolume_VAR.png" style="width:80%;"/><br>
+   Image 4.9 - VAR Data prediction Result - Deliverable Volume
+   
+   <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_PercentageOfDeliverable_VAR.png" style="width:80%;"/><br>
+   Image 4.10 - VAR Data prediction Result - %Deliverable
+   
+   ****Description:****
+   For others:
+   - VAR predictions remain flat across volume-related metrics, failing to reflect real-world volatility  
+   - Underscores the limitations of linear statistical models in capturing dynamic market behavior  
+
+   For %Deliverable:
+   - Actual %Deliverable values show noticeable volatility, while VAR predictions remain smooth and muted  
+   - Suggests VAR struggles to capture settlement-related fluctuations due to limited sensitivity to short-term catalysts  
+   - Highlights the model’s inability to reflect dynamic shifts in delivery behavior driven by market conditions
+
+
+</details>
+
+#### 5. Evaluation Metrics:<br>
+Forecast accuracy was assessed using MAE (average error) and RMSE (penalises large deviations)<br>
+Together they form a balanced evaluation framework widely used in financial forecasting
 
 ### Prediction Results Comparsion
 <details>
    <summary>Source Code for Data Comparsion</summary>
-   <img src="/Image/DataManagement/CalculateBestModel.png" style="width:80%;"/><br>
-   Image 4.1 - Source Code for data comparison
+   <img src="/Image/DataManagement/FunctionForCalculateScoreAndDisplayData.png" style="width:80%;"/><br>
+   Image 5.1 - Source Code for data comparison
 
    ****Description:****<br>
    To identify the most accurate prediction model across multiple architectures (e.g. CNN, RNN, LSTM), the following steps are used:
+   
    1. Data Preparation<br>
-   - For each target column (e.g. volume, close price), extract the ground truth series from the “Actual” dataset.
+   - For each target column (e.g. volume, close price), extract the ground truth series from the “Actual” dataset  
+   - In code: `actual_series = dataMap["Actual"][column]`
    
    2. Iterative Model Evaluation<br>
-   - Loop through each model's prediction dataset
-   - Skip the “Actual” entry to avoid self-comparison
-   - Align the predicted series with the actual one using inner joins to ensure proper index matching
-
+   - Loop through each model's prediction dataset  
+   - Skip the "Actual" entry to avoid self-comparison  
+   - Align the predicted series with the actual one using inner joins to ensure proper index matching  
+   - In code: `predict_series.align(actual_series, join='inner')`
+   
    3. Error Calculation<br>
-   - Compute Mean Absolute Error (MAE) between the aligned predicted and actual series
-   - Store each model’s MAE score for the current column
-     
+   - Compute Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE) between aligned series  
+   - Store each model’s score for the current column  
+   - In code: `mean_absolute_error(...)` or `np.sqrt(mean_squared_error(...))`
+   
    4. Best Model Selection<br>
-   - Choose the model with the lowest MAE score—this indicates the most accurate predictions for that column
-     
-   5. Visualization<br>
-   - Plot time series data for the actual values and each model’s predictions
-   - Highlight the best-performing model for visual comparison
+   - Choose the model with the lowest MAE score—this indicates the most accurate predictions for that column  
+   - In code: `highlight_min(axis=0, color="green")` visually marks the best model
+   
+   5. Visualisation<br>
+   - Plot time series data for the actual values and each model’s predictions  
+   - Highlight the best-performing model for visual comparison  
+   - In code: `display_min_score(...)` returns a styled DataFrame for easy inspection
+
 </details>
 
 <details>
    <summary>Image for Data Comparison</summary>
    <details>
-   <summary>Data Comparison (Stock Price Data)</summary>
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Open_FinalResult.png" style="width:80%;"/><br>
-   Image 4.2 - Data Comparison Result - Open
+   <summary>Data Comparison (Deep Learning models)</summary>
+   <img src="Image/Diagrams/PrediceResult/MAE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
+   Image 5.1 - Deep Learning Model Comparing (MAE)
       
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_High_FinalResult.png" style="width:80%;"/><br>
-   Image 4.3 - Data Comparison Result - High
+   <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_DeepLearningModel.png" style="width:80%;"/><br>
+   Image 5.2 - Deep Learning Model Comparing (RMSE)
       
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Low_FinalResult.png" style="width:80%;"/><br>
-   Image 4.4 - Data Comparison Result - Low
-      
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_PrevClose_FinalResult.png" style="width:80%;"/><br>
-   Image 4.5 - Data Comparison Result - Prev Close
-      
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Close_FinalResult.png" style="width:80%;"/><br>
-   Image 4.6 - Data Comparison Result - Close
-      
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_VWAP_FinalResult.png" style="width:80%;"/><br>
-   Image 4.7 - Data Comparison Result - VWAP<br>
-   
-   ****Description:****<br>
-   - The RNN model shows strong predictive performance across six stock price attributes: Prev Close, Open, High, Low, Close, and VWAP
-      - For each metric, the forecast curve closely aligns with actual values, maintaining smooth temporal behaviour with minimal lag or noise
-      - The consistent prediction quality across all diagrams emphasizes the model's capacity to learn and replicate market price dynamics (Even during volatile periods)
-   - The uniformity in results reinforces the RNN’s dependability for price-based forecasting tasks
-
    ****Conclusion:****<br>
-   - The model provides consistently accurate forecasts across all price metrics, showcasing the robustness of the RNN approach
-   - It also demonstrates its value as a comprehensive forecasting tool for both liquidity and price movements in financial markets when combined with strong performance in volume-related indicators
+   - The RNN model consistently delivers the most accurate forecasts across all financial metrics
+   - RNN outperforming LSTM and CNN in every category
    </details>
 
-   <details>
-   <summary>Data Comparison (Stock Volume Data)</summary>
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Volume_FinalResult.png" style="width:80%;"/><br>
-   Image 4.8 - Data Comparison Result - Volume
-   
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_Turnover_FinalResult.png" style="width:80%;"/><br>
-   Image 4.9 - Data Comparison Result - Turnover
-   
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_DeliverableVolume_FinalResult.png" style="width:80%;"/><br>
-   Image 4.10 - Data Comparison Result - Deliverable Volume
-   
-   <img src="Image/Diagrams/PrediceResult/TimeSeriesChart_PercentageOfDeliverable_FinalResult.png" style="width:80%;"/><br>
-   Image 4.11 - Data Comparison Result - %Deliverable<br>
-
-   ****Description:****<br>
-   - Volume – Actual vs Prediction (Best: RNN)
-      - The RNN effectively tracks trading volume patterns, showing strong alignment with recent fluctuations
-      - Any divergences highlight where market behaviour deviated from historical trends captured by the model
-
-   - Turnover – Actual vs Prediction (Best: RNN)
-      - The predicted turnover closely mirrors actual performance, indicating the model's sensitivity to high-value transactions
-      - Useful for understanding cash flow intensity on trading days
-
-   - Deliverable Volume – Actual vs Prediction (Best: RNN)
-      - The model excels in identifying deliverable activity, which may reflect investor confidence or long-term interest
-      - Minor prediction errors here could relate to sudden shifts in speculative trading
-
-   - %Deliverable – Actual vs Prediction (Best: RNN)
-      - This metric is more stable and reflects underlying market sentiment
-      - The model’s prediction maintains a consistent trend, confirming its reliability in forecasting investor behaviour
-    
+   <summary>Data Comparison (RNN vs VAR)</summary>
+   <img src="Image/Diagrams/PrediceResult/MAE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
+   Image 5.3 - RNN vs VAR (MAE)
+      
+   <img src="Image/Diagrams/PrediceResult/RMSE_Comparing_RNNvsVAR.png" style="width:80%;"/><br>
+   Image 5.4 - RNN vs VAR (RMSE)
+      
    ****Conclusion:****<br>
-   - Overall, the RNN model demonstrates high accuracy across all volume-related metrics, making it a strong candidate for anticipating future trading behaviour
+   - RNN consistently delivers lower error scores
+   - VAR shows much higher prediction errors (especially in price-related metrics like Close, High, and VWAP)
+   - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR.
    </details>
 
    ****Summary:****<br>
-   - The RNN model consistently shows high predictive accuracy across price- and volume-related stock attributes. Whether forecasting daily price movements—such as Open, Close, High, Low, VWAP, and Prev Close — or analysing market activity via Volume, Turnover, Deliverable Volume, and %Deliverable, the model demonstrates:
-      - Tight alignment with actual market trends
-      - Minimal prediction lag or volatility
-      - Strong responsiveness to fluctuating behaviour
-      - Reliability in tracking investor sentiment and liquidity
-   - This cross-dimensional consistency reinforces the robustness of the RNN approach in capturing time-series stock behaviour
-   - The model is well-suited for building intelligent forecasting systems that anticipate both market price action and transactional dynamics.
+   - RNN is the most suitable model for financial time series forecasting
+      - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships
+        
+   - Consistently outperforms VAR, LSTM, and CNN in both MAE and RMSE evaluations
+      - VAR vs RNN
+         - VAR relies on linear assumptions and struggles with volatility
+         - RNN adapts better to non-stationary financial data
+
+      - LSTM vs RNN
+        - LSTM captures long-term dependencies but is more complex
+        - RNN achieves similar sequence modelling with lower complexity, making it more efficient for this dataset
+      
+      - CNN vs RNN
+        - CNN focuses on local patterns
+        - RNN better handles long-term dependencies across multiple financial metrics
+          
+   - Overall, RNN demonstrates the strongest balance of accuracy, stability, and adaptability across all tested models
+   - Highlights RNN as the most reliable choice for financial forecasting tasks(Time-series based)
 </details>
 
 ## License
