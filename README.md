@@ -91,6 +91,7 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
    Image 1.4 - Group up the data to priceData and volumeData (used for the data analyst before data training)
 </details>
 
+
 ### 2. Data Analyst
 Analyse the data range, trends and the relation in each column
 - Diagram Used:
@@ -120,6 +121,7 @@ Analyse the data range, trends and the relation in each column
    Image 2.6 - Box plot for VWAP column data<br>
 </details>
 
+
 <details>
    <summary>Box plot (Stock Volume Data)</summary>
    <img src="Image/Diagrams/AnalyseData/BoxPlot_Turnover.png" style="width:50%;"/><br>
@@ -134,6 +136,7 @@ Analyse the data range, trends and the relation in each column
    <img src="Image/Diagrams/AnalyseData/BoxPlot_PercentageOfDeliverable.png" style="width:50%;"/><br>
    Image 2.10 - Box plot for %Deliverable column data<br>
 </details>
+
 
 <details>
    <summary>Time Series Chart (Stock Price Data)</summary>
@@ -155,6 +158,7 @@ Analyse the data range, trends and the relation in each column
    <img src="Image/Diagrams/AnalyseData/TimeSeriesChart_VWAP.png" style="width:80%;"/><br>
    Image 2.16 - Time Series Chart for VWAP column data<br>
 </details>
+
 
 <details>
    <summary>Time Series Chart (Stock Volume Data)</summary>
@@ -190,6 +194,7 @@ Analyse the data range, trends and the relation in each column
    - %Deliverable shows weaker associations, capturing a distinct settlement-related dimension
 </details>
 
+
 <details>
    <summary>HeatMap</summary>
    <img src="Image/Diagrams/AnalyseData/HeatMap_StockData.png" style="width:80%;"/><br>
@@ -202,11 +207,13 @@ Analyse the data range, trends and the relation in each column
    - %Deliverable has weak correlations, reflecting a distinct settlement-related dimension
 </details>
 
+
 ## Modeling Pipeline
 ### 1. Preprocessing
 1. Scale each column to [0,1] with MinMaxScaler
 2. Window into 60-day input sequences for supervised learning
 3. Split 80% train / 20% test<br>
+
 
 <details>
    <summary>Image for Preprocessing</summary>
@@ -235,6 +242,7 @@ Analyse the data range, trends and the relation in each column
 
 **Remarks:**
 - VAR is a classical statistical approach that uses multiple lagged variables to capture linear interdependencies among time series
+
 
 <details> 
    <summary>Image for apply Deep Learning Models</summary>
@@ -266,6 +274,7 @@ Analyse the data range, trends and the relation in each column
    - This setup provides a fair comparison between classical statistical methods and deep learning approaches for financial forecasting
 </details>
 
+
 ## Prediction Results
 ### 1. Prediction Results For LSTM
 <details>
@@ -292,8 +301,8 @@ Analyse the data range, trends and the relation in each column
    - LSTM predictions mirror the overall trend, rising and falling with actual prices  
    - Divergence appears in timing and amplitude, missing sharp peaks or sudden drops  
    - Limitations stem from memory constraints and lack of external signals for abrupt market shifts
-
 </details>
+
    
 <details>
    <summary>Result of stock data prediction (LSTM) - Stock Volume Data</summary>
@@ -314,6 +323,7 @@ Analyse the data range, trends and the relation in each column
    - Underreacts to sudden surges or dips, producing muted predictions during high activity  
    - Limited by reliance on historical OHLCV data, lacking external catalysts like news or macro signals
 </details>
+
 
 ### 2. Prediction Results For RNN
 <details>
@@ -341,6 +351,7 @@ Analyse the data range, trends and the relation in each column
    - Misses sharp spikes or dips, reflecting reliance on historical values without external signals
 </details>
 
+
 <details>
    <summary>Result of stock data prediction (RNN) - Stock Volume Data</summary>
    <img src="Image/Diagrams/PrediceResult/RNN/TimeSeriesChart_Volume_RNN.png" style="width:80%;"/><br>
@@ -363,6 +374,7 @@ Analyse the data range, trends and the relation in each column
    For %Deliverable Data:
    - Limited in handling high-volatility features, as it doesn’t integrate sudden market catalysts
 </details>
+
 
 ### 3. Prediction Results For CNN
 <details>
@@ -391,6 +403,7 @@ Analyse the data range, trends and the relation in each column
    - Strong at local pattern recognition but limited in long-term temporal modeling for volatile series
 </details>
 
+
 <details>
    <summary>Result of stock data prediction (CNN) - Stock Volume Data</summary>
    <img src="Image/Diagrams/PrediceResult/CNN/TimeSeriesChart_Volume_CNN.png" style="width:80%;"/><br>
@@ -416,6 +429,7 @@ Analyse the data range, trends and the relation in each column
    - Underperforms in volatile phases, missing sharp spikes or drops  
    - Limited in handling noisy, high-frequency variation due to weak temporal/context awareness
 </details>
+
 
 ### 4. Prediction Results For VAR
 <details>
@@ -444,6 +458,7 @@ Analyse the data range, trends and the relation in each column
    - It reinforces the need for deep learning approaches that can model non-linear patterns and temporal dependencies
 </details>
 
+
 <details>
    <summary>Result of stock data prediction (VAR) - Stock Volume Data</summary>
    <img src="Image/Diagrams/PrediceResult/VAR/TimeSeriesChart_Volume_VAR.png" style="width:80%;"/><br>
@@ -468,6 +483,7 @@ Analyse the data range, trends and the relation in each column
    - Suggests VAR struggles to capture settlement-related fluctuations due to limited sensitivity to short-term catalysts  
    - Highlights the model’s inability to reflect dynamic shifts in delivery behavior driven by market conditions
 </details>
+
 
 ## Evaluation Metrics
 Forecast accuracy was assessed using MAE (average error) and RMSE (penalises large deviations)<br>
@@ -505,6 +521,7 @@ Together they form a balanced evaluation framework widely used in financial fore
    - In code: `display_min_score(...)` returns a styled DataFrame for easy inspection
 </details>
 
+
 <details>
    <summary>Image for Data Comparison</summary>
    <details>
@@ -519,7 +536,6 @@ Together they form a balanced evaluation framework widely used in financial fore
    - The RNN model consistently delivers the most accurate forecasts across all financial metrics
    - RNN outperforming LSTM and CNN in every category
    </details>
-
    
    <details>
    <summary>Data Comparison (RNN vs VAR)</summary>
@@ -535,8 +551,10 @@ Together they form a balanced evaluation framework widely used in financial fore
    - This confirms RNN’s superior ability to capture market dynamics compared to traditional linear models like VAR
    </details>
 
+
    <details>
    <summary>Conclusion</summary>
+      
    - RNN is the most suitable model for financial time series forecasting
    - It captures dynamic market changes, learns temporal dependencies, and models complex non-linear relationships
         
