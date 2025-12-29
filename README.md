@@ -279,7 +279,7 @@ Analyse the data range, trends and the relation in each column
 
 
 <details> 
-   <summary>Image for apply Deep Learning Models</summary>
+   <summary>Image for applied models (Deep Learning & Statistical)</summary>
    <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:85%;"/><br>
    Image 2.1 - Source Code about LSTM Application
    
