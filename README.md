@@ -32,6 +32,7 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
 
 
 ## Installation
+### For local
 1. Clone this repo
    ```bash
    git clone https://github.com/TomWai821/StockDataPredictionProject.git
@@ -39,10 +40,39 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
 
 2. Create a virtual environment and install dependencies
    ```bash
-   python3 -m venv venv source venv/bin/activate
+   python3 -m venv venv
+   source venv/bin/activate
 
    # on Windows:
-   venv\Scripts\activate pip install -r requirements.txt
+   venv\Scripts\activate
+
+3. Install dependencies
+   ```bash
+   pip install -r requirements.txt && jupyter notebook
+   
+4. Run Jupyter Notbook
+   ```bash
+   jupyter notebook
+
+5. Open the notebook file
+In the Jupyter Notebook interface, click on `StockDataAnalysis.ipynb` to view and run the results
+
+### For Docker
+1. Clone this repo
+   ```bash
+   git clone https://github.com/TomWai821/StockDataPredictionProject.git
+   cd StockDataPredictionProject
+
+2. Run the docker container
+   ```bash
+   docker compose up --build
+
+3. Open the Jupyter Notebook with your brower
+   - URL: http://localhost:8888
+   - Use the token shown in the container log to login
+
+4. Open the notebook file
+   In the Jupyter Notebook interface, click on `StockDataAnalysis.ipynb` to view and run the results
 
 ## Data Source
 ### Data Source
@@ -74,6 +104,11 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
   | Turnover           | The total monetary value of shares traded (Volume × Price)                  |
   | Deliverable Volume | Portion of traded shares that are settled (not squared off intra-day)       |
   | %Deliverable       | Ratio of deliverable volume to total volume – indicates investor conviction |
+
+
+**Remarks**:  
+- The result dataset may be updated or modified during notebook execution
+- These changes do not affect the overall conclusions — evaluation consistently shows that the RNN model achieves the best performance among the tested approaches
 
 <details>
 <summary>Image for data filtering and description</summary>
@@ -244,7 +279,7 @@ Analyse the data range, trends and the relation in each column
 
 
 <details> 
-   <summary>Image for apply Deep Learning Models</summary>
+   <summary>Image for applied models (Deep Learning & Statistical)</summary>
    <img src="Image/DataManagement/DataTraining_LSTM.png" style="width:85%;"/><br>
    Image 2.1 - Source Code about LSTM Application
    
