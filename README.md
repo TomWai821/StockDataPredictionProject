@@ -107,7 +107,7 @@ The experiments use daily OHLCV (Open, High, Low, Close, Volume) data for the NI
 
 
 **Remarks**:  
-- The dataset may be updated or modified during notebook execution.  
+- The result dataset may be updated or modified during notebook execution
 - These changes do not affect the overall conclusions — evaluation consistently shows that the RNN model achieves the best performance among the tested approaches
 
 <details>
