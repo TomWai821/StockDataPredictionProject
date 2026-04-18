@@ -16,25 +16,31 @@ A comparative study of traditional statistical models (VAR) and deep learning ar
 
 
 ## Overview
-- This project benchmarks three deep‐learning approaches—1D Convolutional Neural Networks (CNNs), vanilla Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs) and Vector Auto Regression(VAR) — on historical stock‐price data.
+- This project benchmarks three deep‐learning approaches—1D Convolutional Neural Networks (CNNs), vanilla Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs) and Vector Auto Regression(VAR) — on historical stock‐price data
 - The goal is to identify which model achieves the best trade-off between forecasting accuracy and training/inference efficiency
 
 
 
 ## Engineering and Deployment Highlights
 - **Dockerised Environment**
-   - Encapsulated the entire Python/TensorFlow environment into a Docker container to ensure Environment Parity and eliminate dependency conflicts
+   - Encapsulated the entire Python/TensorFlow environment into a Docker container to ensure Environmental Parity and eliminate dependency conflicts
 
 - **Data Preprocessing Pipeline**
    - Engineered a robust data flow handling raw OHLCV data, featuring:
       - **Feature Scaling**
-         - Implemented Min-Max normalization to accelerate model convergence
+         - Implemented Min-Max normalisation to accelerate model convergence
      
       - **Noise Filtering**
         - Dynamic data cleaning to enhance signal-to-noise ratio in time-series data
      
 - **Benchmarking Strategy**
    - Implemented systematic evaluation metrics (MAE, RMSE) to compare Deep Learning (CNN/RNN/LSTM) against Statistical (VAR) baselines
+ 
+- **Data Visualisation and Insights**
+   - Leveraged **Matplotlib** and **Seaborn** to generate comparative plots of predicted vs actual prices
+     (Enable intuitive verification of model performance)
+   - Visualised training loss and validation curves to monitor for overfitting/underfitting
+     (Ensure optimal model selection through objective visual evidence)
 
 
 
