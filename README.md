@@ -2,7 +2,8 @@
 A comparative study of traditional statistical models (VAR) and deep learning architectures (CNN, RNN, LSTM) for stock price forecasting, highlighting their differences in handling financial time-series data
 
 ## Table of Contents
-- [Project Overview](#project-overview)  
+- [Overview](#overview)
+- [Engineering & Deployment Highlights](#engineering-&-deployment-highlights)  
 - [Features](#features)
 - [Dependencies](#dependencies)  
 - [Installation](#installation)  
@@ -12,14 +13,38 @@ A comparative study of traditional statistical models (VAR) and deep learning ar
 - [Evaluation Metrics](#evaluation-metrics)
 - [License](#license)  
 
-## Project Overview
-This project benchmarks three deep‐learning approaches—1D Convolutional Neural Networks (CNNs), vanilla Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs) and Vector Auto Regression(VAR) — on historical stock‐price data. The goal is to identify which model achieves the best trade-off between forecasting accuracy and training/inference efficiency.
+
+
+## Overview
+- This project benchmarks three deep‐learning approaches—1D Convolutional Neural Networks (CNNs), vanilla Recurrent Neural Networks (RNNs), Long Short-Term Memory networks (LSTMs) and Vector Auto Regression(VAR) — on historical stock‐price data.
+- The goal is to identify which model achieves the best trade-off between forecasting accuracy and training/inference efficiency
+
+
+
+## Engineering & Deployment Highlights
+- **Dockerised Environment**
+   - Encapsulated the entire Python/TensorFlow environment into a Docker container to ensure Environment Parity and eliminate dependency conflicts
+
+- **Data Preprocessing Pipeline**
+   - Engineered a robust data flow handling raw OHLCV data, featuring:
+      - **Feature Scaling**
+         - Implemented Min-Max normalization to accelerate model convergence
+     
+      - **Noise Filtering**
+        - Dynamic data cleaning to enhance signal-to-noise ratio in time-series data
+     
+- **Benchmarking Strategy**
+   - Implemented systematic evaluation metrics (MAE, RMSE) to compare Deep Learning (CNN/RNN/LSTM) against Statistical (VAR) baselines
+
+
 
 ## Features
 - Data ingestion & preprocessing pipeline  
 - Parameterised TensorFlow training scripts for CNN, RNN and LSTM  
 - Automated evaluation: MSE, MAE, RMSE, direction accuracy  
 - Visualisation of loss curves and predicted vs actual prices
+
+
 
 ## Dependencies
 - NumPy - Numerical operations and array structures
@@ -31,7 +56,26 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
 - Statsmodels - Vector AutoRegression (VAR) baseline model
 
 
+
 ## Installation
+### For Docker
+1. Clone this repo
+   ```bash
+   git clone https://github.com/TomWai821/StockDataPredictionProject.git
+   cd StockDataPredictionProject
+
+2. Run the Docker container
+   ```bash
+   docker compose up --build
+
+3. Open the Jupyter Notebook with your browser 
+   - URL: http://localhost:8888
+   - Use the token shown in the container log to login
+
+4. Open the notebook file
+   In the Jupyter Notebook interface, click on `StockDataAnalysis.ipynb` to view and run the results
+
+   
 ### For local
 1. Clone this repo
    ```bash
@@ -46,33 +90,15 @@ This project benchmarks three deep‐learning approaches—1D Convolutional Neur
    # on Windows:
    venv\Scripts\activate
 
-3. Install dependencies
+3. Install dependencies and Run Jupyter Notebook
    ```bash
-   pip install -r requirements.txt && jupyter notebook
-   
-4. Run Jupyter Notbook
-   ```bash
+   pip install -r requirements.txt
    jupyter notebook
-
-5. Open the notebook file
-In the Jupyter Notebook interface, click on `StockDataAnalysis.ipynb` to view and run the results
-
-### For Docker
-1. Clone this repo
-   ```bash
-   git clone https://github.com/TomWai821/StockDataPredictionProject.git
-   cd StockDataPredictionProject
-
-2. Run the docker container
-   ```bash
-   docker compose up --build
-
-3. Open the Jupyter Notebook with your brower
-   - URL: http://localhost:8888
-   - Use the token shown in the container log to login
 
 4. Open the notebook file
    In the Jupyter Notebook interface, click on `StockDataAnalysis.ipynb` to view and run the results
+
+
 
 ## Data Source
 ### Data Source
