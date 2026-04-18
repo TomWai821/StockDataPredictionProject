@@ -39,6 +39,7 @@ A comparative study of traditional statistical models (VAR) and deep learning ar
 - **Data Visualisation and Insights**
    - Leveraged **Matplotlib** and **Seaborn** to generate comparative plots of predicted vs actual prices<br>
      (Enable intuitive verification of model performance)
+     
    - Visualised training loss and validation curves to monitor for overfitting/underfitting<br>
      (Ensure optimal model selection through objective visual evidence)
 
