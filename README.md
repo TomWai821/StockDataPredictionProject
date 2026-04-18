@@ -3,7 +3,7 @@ A comparative study of traditional statistical models (VAR) and deep learning ar
 
 ## Table of Contents
 - [Overview](#overview)
-- [Engineering & Deployment Highlights](#engineering-&-deployment-highlights)  
+- [Engineering and Deployment Highlights](#engineering-and-deployment-highlights)
 - [Features](#features)
 - [Dependencies](#dependencies)  
 - [Installation](#installation)  
@@ -21,7 +21,7 @@ A comparative study of traditional statistical models (VAR) and deep learning ar
 
 
 
-## Engineering & Deployment Highlights
+## Engineering and Deployment Highlights
 - **Dockerised Environment**
    - Encapsulated the entire Python/TensorFlow environment into a Docker container to ensure Environment Parity and eliminate dependency conflicts
 
