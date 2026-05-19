@@ -51,11 +51,11 @@ FROM continuumio/miniconda3:latest AS jupyter
 
 WORKDIR /workspace
 
-# 安裝 Jupyter Notebook / JupyterLab
+# Install Jupyter Notebook / JupyterLab
 RUN conda install -y jupyterlab notebook ipykernel numpy pandas matplotlib seaborn scikit-learn tensorflow statsmodels && conda clean -afy
 
-# 把你的程式碼或 notebook 複製進來
+# Copy the whole notebook file to the container
 COPY . .
 
-# 啟動 Jupyter Notebook
+# Launch Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
